@@ -1,0 +1,9 @@
+themes/twentyfourteen/*
+languages/*
+themes/woody/bower_components/*
+themes/woody/gulpfile.js/*
+themes/woody/node_modules/*
+themes/woody/images/*
+themes/woody/src/library/images/*
+themes/woody/src/library/translation/*
+uploads
