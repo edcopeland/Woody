@@ -10,7 +10,7 @@ License: GPLv2
 add_action( 'init', 'create_activity_type' );
 
 function create_activity_type() {
-  register_post_type( 'activites',
+  register_post_type( 'activities',
           array(
               'labels' => array(
                   'name' => 'Activities',
@@ -59,7 +59,7 @@ function create_activity_type_taxonomy() {
   );
 
 
-  register_taxonomy('activity_type',array('activites'), array(
+  register_taxonomy('activity_type',array('activities'), array(
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,
