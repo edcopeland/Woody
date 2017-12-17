@@ -7,3 +7,6 @@ themes/woody/images/*
 themes/woody/src/library/images/*
 themes/woody/src/library/translation/*
 uploads
+notes.txt
+debug.log
+mu-plugins/cmb2/languages/
