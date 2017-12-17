@@ -93,3 +93,35 @@ function woody_register_theme_options_metabox() {
  ) );
 
 }
+
+
+add_action( 'cmb2_admin_init', 'woody_register_theme_activities_metabox' );
+/**
+* Hook in and register a metabox to handle a theme options page and adds a menu item.
+*/
+function woody_register_theme_activities_metabox() {
+   $prefix = '_activities_';
+
+   /**
+    * Registers options page menu item and form.
+    */
+   $woody_activities = new_cmb2_box( array(
+     'id'           => 'woody_theme_activities_metabox',
+     'title'        => esc_html__( 'Woody Contact Details', 'cmb2' ),
+     'object_types' => array( 'activities' ),
+     'option_key'      => 'woody_activities_details', // The option key and admin menu page slug.
+     //'icon_url'        => 'dashicons-palmtree', // Menu icon. Only applicable if 'parent_slug' is left empty.
+
+   ) );
+
+
+
+    $woody_activities->add_field( array(
+  	'name'           => 'Activity Type Select',
+  	'desc'           => 'Select the category in which to show this activity ',
+  	'id'             => 'taxonomy_select',
+  	'taxonomy'       => 'activity_type', //Enter Taxonomy Slug
+  	'type'           => 'taxonomy_select',
+  	'remove_default' => 'true' // Removes the default metabox provided by WP core. Pending release as of Aug-10-16
+  ) );
+}
