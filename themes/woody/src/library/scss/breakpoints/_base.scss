@@ -164,11 +164,19 @@ HEADER STYLES
 		}
 	}
 
-	.custom-logo{
-		width: 75px;
-		height: auto;
+.custom-logo{
+	width: 75px;
+	height: auto;
+	float:left;
+	z-index:10;
+	position: absolute;
 
-	}
+}
+.header-image{
+	z-index:1;
+	clear:left;
+}
+
 
 /*********************
 NAVIGATION STYLES

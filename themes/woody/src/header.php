@@ -47,7 +47,6 @@
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 				<div id="inner-header" class="wrap cf">
-
 					<?php if ( function_exists( 'the_custom_logo' ) ) {
     				the_custom_logo();
 						} ?>
@@ -58,6 +57,9 @@
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
+					<div id="header-image">
+						<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+					</div>
 
 
 					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
