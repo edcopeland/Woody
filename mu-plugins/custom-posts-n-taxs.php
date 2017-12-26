@@ -29,11 +29,11 @@ function create_activity_type() {
               ),
 
               'public' => true,
-              'menu_position' => 15,
+              'menu_position' => 6,
               'supports' => array( 'title', 'editor', 'thumbnail' ),
               'taxonomies' => array( '' ),
               'show_in_rest'      => true,
-              'menu_icon' => plugins_url( 'images/image.png', __FILE__ ),
+              'menu_icon' => "dashicons-admin-post",
               'has_archive' => true
           )
       );}
@@ -61,11 +61,11 @@ function create_location_type() {
               ),
 
               'public' => true,
-              'menu_position' => 15,
+              'menu_position' => 7,
               'supports' => array( 'title', 'editor', 'thumbnail' ),
               'taxonomies' => array( '' ),
               'show_in_rest'      => true,
-              'menu_icon' => plugins_url( 'images/image.png', __FILE__ ),
+              'menu_icon' => "dashicons-admin-post",
               'has_archive' => true
           )
       );
