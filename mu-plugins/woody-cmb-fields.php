@@ -2,12 +2,11 @@
 
 // Include CMB2 globally for this site.
 
-
-  if ( file_exists( WPMU_PLUGIN_DIR . '/cmb2/init.php' ) ) {
+if ( file_exists( WPMU_PLUGIN_DIR . '/cmb2/init.php' ) ) {
   	require_once WPMU_PLUGIN_DIR . '/cmb2/init.php';
-  } elseif ( file_exists( WPMU_PLUGIN_DIR . '/CMB2/init.php' ) ) {
+} elseif ( file_exists( WPMU_PLUGIN_DIR . '/CMB2/init.php' ) ) {
   	require_once WPMU_PLUGIN_DIR . '/CMB2/init.php';
-  }
+}
 
 
 add_action( 'cmb2_admin_init', 'woody_register_theme_options_metabox' );
@@ -22,10 +21,12 @@ function woody_register_theme_options_metabox() {
   */
  $cmb_options = new_cmb2_box( array(
    'id'           => 'woody_theme_options_page',
-   'title'        => esc_html__( 'Woody Contact Details', 'cmb2' ),
+   'title'        => esc_html__( 'Contact Details', 'cmb2' ),
    'object_types' => array( 'options-page' ),
    'option_key'      => 'woody_contact_details', // The option key and admin menu page slug.
-   'icon_url'        => 'dashicons-palmtree', // Menu icon. Only applicable if 'parent_slug' is left empty.
+   //'icon_url'        => 'dashicons-palmtree', // Menu icon. Only applicable if 'parent_slug' is left empty.
+   'parent_slug'     => 'options-general.php',
+   'capability'      => 'manage_options',
 
  ) );
 
@@ -107,7 +108,7 @@ function woody_register_theme_activities_metabox() {
     */
    $woody_activities = new_cmb2_box( array(
      'id'           => 'woody_theme_activities_metabox',
-     'title'        => esc_html__( 'Woody Contact Details', 'cmb2' ),
+     'title'        => esc_html__( ' ', 'cmb2' ),
      'object_types' => array( 'activities' ),
      'option_key'      => 'woody_activities_details', // The option key and admin menu page slug.
      //'icon_url'        => 'dashicons-palmtree', // Menu icon. Only applicable if 'parent_slug' is left empty.
@@ -118,7 +119,7 @@ function woody_register_theme_activities_metabox() {
 
     $woody_activities->add_field( array(
   	'name'           => 'Activity Type Select',
-  	'desc'           => 'Select the category in which to show this activity ',
+  	'desc'           => 'Select the category in which to show this activity. Selecting None will remove this activity from view',
   	'id'             => 'taxonomy_select',
   	'taxonomy'       => 'activity_type', //Enter Taxonomy Slug
   	'type'           => 'taxonomy_select',
