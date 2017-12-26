@@ -13,7 +13,7 @@ function create_activity_type() {
   register_post_type( 'activities',
           array(
               'labels' => array(
-                  'name' => 'Activities',
+                  'name' => 'What We Do',
                   'singular_name' => 'Activity',
                   'add_new' => 'Add New',
                   'add_new_item' => 'Add New Activity',
@@ -38,7 +38,40 @@ function create_activity_type() {
           )
       );}
 
-      add_action( 'init', 'create_activity_type_taxonomy', 0 );
+
+add_action( 'init', 'create_location_type' );
+
+function create_location_type() {
+  register_post_type( 'locations',
+          array(
+              'labels' => array(
+                  'name' => 'Locations',
+                  'singular_name' => 'Location',
+                  'add_new' => 'Add New',
+                  'add_new_item' => 'Add New Location',
+                  'edit' => 'Edit',
+                  'edit_item' => 'Edit Location',
+                  'new_item' => 'New Location',
+                  'view' => 'View',
+                  'view_item' => 'View Location',
+                  'search_items' => 'Search Locations',
+                  'not_found' => 'No Locations found',
+                  'not_found_in_trash' => 'No Locations found in Trash',
+                  'parent' => 'Parent Location'
+              ),
+
+              'public' => true,
+              'menu_position' => 15,
+              'supports' => array( 'title', 'editor', 'thumbnail' ),
+              'taxonomies' => array( '' ),
+              'show_in_rest'      => true,
+              'menu_icon' => plugins_url( 'images/image.png', __FILE__ ),
+              'has_archive' => true
+          )
+      );
+}
+
+add_action( 'init', 'create_activity_type_taxonomy', 0 );
 
       // an Activity Type taxonomy for categorising activities by type
 function create_activity_type_taxonomy() {
