@@ -126,3 +126,85 @@ function woody_register_theme_activities_metabox() {
   	'remove_default' => 'true' // Removes the default metabox provided by WP core. Pending release as of Aug-10-16
   ) );
 }
+
+
+
+
+/**
+ * Gets a number of posts and displays them as options
+ * @param  array $query_args Optional. Overrides defaults.
+ * @return array             An array of options that matches the CMB2 options array
+ */
+function cmb2_get_post_options( $query_args ) {
+
+	$args = wp_parse_args( $query_args, array(
+		'post_type'   => 'post',
+		'numberposts' => 10,
+	) );
+
+	$posts = get_posts( $args );
+
+	$post_options = array();
+	if ( $posts ) {
+		foreach ( $posts as $post ) {
+          $post_options[ $post->ID ] = $post->post_title;
+		}
+	}
+
+	return $post_options;
+}
+
+/**
+ * Gets all locations and displays them as options
+ * @return array An array of options that matches the CMB2 options array
+ */
+function cmb2_get_location_post_options() {
+	return cmb2_get_post_options( array( 'post_type' => 'locations', 'numberposts' => -1 ) );
+}
+
+
+add_action( 'cmb2_admin_init', 'woody_register_post_metabox' );
+/**
+* Hook in and register a metabox to handle a theme options page and adds a menu item.
+*/
+function woody_register_post_metabox() {
+   $prefix = '_locations_';
+
+   /**
+    * Registers options page menu item and form.
+    */
+   $woody_locations = new_cmb2_box( array(
+     'id'           => 'woody_theme_locations_metabox',
+     'title'        => esc_html__( ' ', 'cmb2' ),
+     'object_types' => array( 'post' ),
+     'option_key'      => 'woody_location_details', // The option key and admin menu page slug.
+     //'icon_url'        => 'dashicons-palmtree', // Menu icon. Only applicable if 'parent_slug' is left empty.
+
+   ) );
+
+  $woody_locations->add_field( array(
+    'name' => 'Start Date',
+    'id'   => 'woody_post_start_date',
+    'type' => 'text_date',
+    // 'timezone_meta_key' => 'wiki_test_timezone',
+    // 'date_format' => 'l jS \of F Y',
+ ) );
+
+  $woody_locations->add_field( array(
+   'name' => 'End Date',
+   'id'   => 'woody_post_end_date',
+   'type' => 'text_date',
+   // 'timezone_meta_key' => 'wiki_test_timezone',
+   // 'date_format' => 'l jS \of F Y',
+ ) );
+
+  $woody_locations->add_field( array(
+  	'name'       => __( 'Select Related Locations', 'cmb2' ),
+  	'desc'       => __( 'Relate this Post to Locations', 'cmb2' ),
+  	'id'         => $prefix . 'post_multicheckbox',
+  	'type'       => 'multicheck',
+  	'options_cb' => 'cmb2_get_location_post_options',
+) );
+
+
+}
