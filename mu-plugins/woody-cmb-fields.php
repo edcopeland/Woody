@@ -162,13 +162,21 @@ function cmb2_get_location_post_options() {
 	return cmb2_get_post_options( array( 'post_type' => 'locations', 'numberposts' => -1 ) );
 }
 
+/**
+ * Gets all locations and displays them as options
+ * @return array An array of options that matches the CMB2 options array
+ */
+function cmb2_get_activity_post_options() {
+	return cmb2_get_post_options( array( 'post_type' => 'activities', 'numberposts' => -1 ) );
+}
+
 
 add_action( 'cmb2_admin_init', 'woody_register_post_metabox' );
 /**
 * Hook in and register a metabox to handle a theme options page and adds a menu item.
 */
 function woody_register_post_metabox() {
-   $prefix = '_locations_';
+  $prefix = '_locations_';
 
    /**
     * Registers options page menu item and form.
@@ -181,6 +189,13 @@ function woody_register_post_metabox() {
      //'icon_url'        => 'dashicons-palmtree', // Menu icon. Only applicable if 'parent_slug' is left empty.
 
    ) );
+
+  $woody_locations->add_field( array(
+   	'name' => 'Archive',
+   	'desc' => 'Check to move Post to Archive',
+   	'id'   => $prefix .'archive_checkbox',
+   	'type' => 'checkbox',
+ ) );
 
   $woody_locations->add_field( array(
     'name' => 'Start Date',
@@ -206,5 +221,12 @@ function woody_register_post_metabox() {
   	'options_cb' => 'cmb2_get_location_post_options',
 ) );
 
+  $woody_locations->add_field( array(
+    'name'       => __( 'Select Related Activities', 'cmb2' ),
+    'desc'       => __( 'Relate this Post to Activities', 'cmb2' ),
+    'id'         => $prefix . 'activity_multicheckbox',
+    'type'       => 'multicheck',
+    'options_cb' => 'cmb2_get_activity_post_options',
+  ) );
 
 }
