@@ -68,7 +68,7 @@
 							</article>
 					<?php
 				endwhile; ?>
-			<?php bones_page_navi('','',$loop); ?>
+			<?php //bones_page_navi('','',$loop); ?>
 
 			<?php
 			else : ?>

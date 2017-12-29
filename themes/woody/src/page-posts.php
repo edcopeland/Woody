@@ -37,7 +37,7 @@
 	<?php endwhile;?>
        <?php
 		      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-		      $mypost = array( 'post_type' => 'post','paged' => $paged,  'posts_per_page' => -1,'category__not_in' => 14);
+		      $mypost = array( 'post_type' => 'post','paged' => $paged,  'posts_per_page' => 10,'category__not_in' => 14);
 		      $loop = new WP_Query( $mypost )
         ?>
   		<?php if (have_posts()) :
