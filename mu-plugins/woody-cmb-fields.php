@@ -190,12 +190,6 @@ function woody_register_post_metabox() {
 
    ) );
 
-  $woody_locations->add_field( array(
-   	'name' => 'Archive',
-   	'desc' => 'Check to move Post to Archive',
-   	'id'   => $prefix .'archive_checkbox',
-   	'type' => 'checkbox',
- ) );
 
   $woody_locations->add_field( array(
     'name' => 'Start Date',
