@@ -14,7 +14,6 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-
 body {
 	font-family: $lato;
 	font-size: 100%;
@@ -874,8 +873,9 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	background-color: $meta-gray;
+	color: $black;
+	padding: 5em;
 }
 
 	/*

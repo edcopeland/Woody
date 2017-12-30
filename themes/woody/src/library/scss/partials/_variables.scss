@@ -29,18 +29,17 @@ $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
 $text-color:        #5c6b80;
 $meta-gray:         #9fa6b4;
-$highlight-green:   #93C84A;
+$highlight-green:   #6b892a;
 
 $tan:               #eceee5;
 
 $green:             #7a9536;
-$light-green:       lighten($green,56%);
+$light-green:       lighten($green, 56%);
 
-$bones-pink:        #f01d4f;
 $blue:              #2980b9;
 
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
+$link-color:        $highlight-green;
+$link-hover:        lighten($link-color, 15%);
 
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;
