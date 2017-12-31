@@ -212,16 +212,14 @@ function woody_register_post_metabox() {
     'name' => 'Start Date',
     'id'   => 'woody_post_start_date',
     'type' => 'text_date',
-    // 'timezone_meta_key' => 'wiki_test_timezone',
-    // 'date_format' => 'l jS \of F Y',
+    'date_format' => 'd/m/Y',
  ) );
 
   $woody_locations->add_field( array(
    'name' => 'End Date',
    'id'   => 'woody_post_end_date',
    'type' => 'text_date',
-   // 'timezone_meta_key' => 'wiki_test_timezone',
-   // 'date_format' => 'l jS \of F Y',
+   'date_format' => 'd/m/Y',
  ) );
 
   $woody_locations->add_field( array(
