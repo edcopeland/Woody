@@ -14,14 +14,14 @@ add_action( 'cmb2_admin_init', 'woody_register_theme_options_metabox' );
 * Hook in and register a metabox to handle a theme options page and adds a menu item.
 */
 function woody_register_theme_options_metabox() {
- $prefix = '_woody_';
+ $prefix = '_contact_options_';
 
  /**
   * Registers options page menu item and form.
   */
- $cmb_options = new_cmb2_box( array(
-   'id'           => 'woody_theme_options_page',
-   'title'        => esc_html__( 'Contact Details', 'cmb2' ),
+ $contact_options = new_cmb2_box( array(
+   'id'           => 'contact_options_page',
+   'title'        => esc_html__( 'Contact Details', $prefix ),
    'object_types' => array( 'options-page' ),
    'option_key'      => 'woody_contact_details', // The option key and admin menu page slug.
    //'icon_url'        => 'dashicons-palmtree', // Menu icon. Only applicable if 'parent_slug' is left empty.
@@ -31,75 +31,92 @@ function woody_register_theme_options_metabox() {
  ) );
 
 
-  $cmb_options->add_field( array(
-    'name'       => esc_html__( 'Company Name', 'cmb2' ),
+  $contact_options->add_field( array(
+    'name'       => esc_html__( 'Company Name', $prefix ),
     'id'         => $prefix . 'company_name',
     'type'       => 'text',
 
   ) );
 
-  $cmb_options->add_field( array(
-    'name'       => esc_html__( 'C/O', 'cmb2' ),
+  $contact_options->add_field( array(
+    'name'       => esc_html__( 'C/O', $prefix ),
     'id'         => $prefix . 'c_o',
     'type'       => 'text',
 
   ) );
 
-  $cmb_options->add_field( array(
-    'name'       => esc_html__( 'Address', 'cmb2' ),
+  $contact_options->add_field( array(
+    'name'       => esc_html__( 'Address', $prefix ),
     'id'         => $prefix . 'address',
     'type'       => 'text',
     'repeatable'      => true,
   ) );
 
-  $cmb_options->add_field( array(
-    'name'       => esc_html__( 'Town/City', 'cmb2' ),
+  $contact_options->add_field( array(
+    'name'       => esc_html__( 'Town/City', $prefix ),
     'id'         => $prefix . 'town',
     'type'       => 'text',
 
   ) );
 
-  $cmb_options->add_field( array(
-    'name'       => esc_html__( 'County', 'cmb2' ),
+  $contact_options->add_field( array(
+    'name'       => esc_html__( 'County', $prefix ),
     'id'         => $prefix . 'county',
     'type'       => 'text',
 
   ) );
 
-  $cmb_options->add_field( array(
-    'name'       => esc_html__( 'Postcode', 'cmb2' ),
+  $contact_options->add_field( array(
+    'name'       => esc_html__( 'Postcode', $prefix ),
     'id'         => $prefix . 'postcode',
     'type'       => 'text',
 
   ) );
 
-  $cmb_options->add_field( array(
-    'name'       => esc_html__( 'Telephone', 'cmb2' ),
-    'id'         => $prefix . 'Tel',
+  $contact_options->add_field( array(
+    'name'       => esc_html__( 'Telephone', $prefix ),
+    'id'         => $prefix . 'tel',
     'type'       => 'text',
 
   ) );
 
- $cmb_options->add_field( array(
-   'name' => esc_html__( 'Twitter URL', 'cmb2' ),
+ $contact_options->add_field( array(
+   'name' => esc_html__( 'Twitter URL', $prefix ),
    'id'   => $prefix . 'url',
    'type' => 'text_url',
 
  ) );
 
- $cmb_options->add_field( array(
-   'name' => esc_html__( 'Email', 'cmb2' ),
+ $contact_options->add_field( array(
+   'name' => esc_html__( 'Email', $prefix ),
    'id'   => $prefix . 'email',
    'type' => 'text_email',
  ) );
 
 }
 
-
 add_action( 'cmb2_admin_init', 'woody_register_theme_activities_metabox' );
 /**
 * Hook in and register a metabox to handle a theme options page and adds a menu item.
 */
+
+function contact_get_option( $key = '', $default = false ) {
+	if ( function_exists( 'cmb2_get_option' ) ) {
+		// Use cmb2_get_option as it passes through some key filters.
+		return cmb2_get_option( 'woody_contact_details', $key, $default );
+	}
+	// Fallback to get_option if CMB2 is not loaded yet.
+	$opts = get_option( 'woody_contact_details', $default );
+	$val = $default;
+	if ( 'all' == $key ) {
+		$val = $opts;
+	} elseif ( is_array( $opts ) && array_key_exists( $key, $opts ) && false !== $opts[ $key ] ) {
+		$val = $opts[ $key ];
+	}
+	return $val;
+}
+
+
 function woody_register_theme_activities_metabox() {
    $prefix = '_activities_';
 

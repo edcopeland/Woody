@@ -20,6 +20,24 @@
 
 					<!-- <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p> -->
 
+					<?php $name = contact_get_option( '_contact_options_company_name');
+								$c_o = contact_get_option( '_contact_options_c_o');
+								$address_array = contact_get_option( '_contact_options_address');
+								$town = contact_get_option( '_contact_options_town');
+								$county = contact_get_option( '_contact_options_county');
+								$postcode = contact_get_option( '_contact_options_postcode');
+								$tel = contact_get_option( '_contact_options_tel');
+								$url = contact_get_option( '_contact_options_url');
+								$email = contact_get_option( '_contact_options_email');
+
+
+					echo  $name.','. $c_o.',';
+					foreach ($address_array as &$value) {
+						echo $value . ',';
+					}
+
+					echo $town .','.$county.','.$postcode.','.$tel.','.$url.','.$email
+?>
 				</div>
 
 			</footer>
