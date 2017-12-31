@@ -20,24 +20,25 @@
 
 					<!-- <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p> -->
 
-					<?php $name = contact_get_option( '_contact_options_company_name');
-								$c_o = contact_get_option( '_contact_options_c_o');
-								$address_array = contact_get_option( '_contact_options_address');
-								$town = contact_get_option( '_contact_options_town');
-								$county = contact_get_option( '_contact_options_county');
-								$postcode = contact_get_option( '_contact_options_postcode');
-								$tel = contact_get_option( '_contact_options_tel');
-								$url = contact_get_option( '_contact_options_url');
-								$email = contact_get_option( '_contact_options_email');
+				<ul>
+						<li><?php echo contact_get_option( '_contact_options_company_name'); ?></li>
+						<li><?php echo  contact_get_option( '_contact_options_c_o');?></li>
+
+						<?php $address_array = contact_get_option( '_contact_options_address');?>
+
+						<?php foreach ($address_array as &$value) { ?>
+						<li><?php echo $value ?></li>
+						<?php } ?>
+						
+						<li><?php echo contact_get_option( '_contact_options_town');?></li>
+						<li><?php echo contact_get_option( '_contact_options_county'); ?></li>
+						<li><?php echo contact_get_option( '_contact_options_postcode'); ?></li>
+						<li><?php echo contact_get_option( '_contact_options_tel'); ?></li>
+						<li><?php echo contact_get_option( '_contact_options_url'); ?></li>
+						<li><?php echo contact_get_option( '_contact_options_email'); ?></li>
+				</ul>
 
 
-					echo  $name.','. $c_o.',';
-					foreach ($address_array as &$value) {
-						echo $value . ',';
-					}
-
-					echo $town .','.$county.','.$postcode.','.$tel.','.$url.','.$email
-?>
 				</div>
 
 			</footer>
