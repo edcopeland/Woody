@@ -50,6 +50,16 @@
                             the_post_thumbnail('all-post-img',array( 'id' => 'all-posts-thumb'));
                         }
                         ?>
+												<?php
+													// Grab the metadata from the database
+													$start_date = get_post_meta( get_the_ID(), 'woody_post_start_date', true );
+													$end_date = get_post_meta( get_the_ID(), 'woody_post_end_date', true );
+
+													// Echo the metadata
+													echo '<div>'. esc_html( $start_date ) .'</div>';
+													echo '<div>'. esc_html( $end_date ).'</div>';
+
+													?>
                   </header>
 
 									<section id="section" class="entry-content cf" itemprop="articleBody">
@@ -84,7 +94,8 @@
           </footer>
 			</article>
 			<?php
-			endif; ?>
+			endif;
+ ?>
 			</div>
 			<?php //get_sidebar(); ?>
 		</div>
