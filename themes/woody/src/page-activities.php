@@ -59,7 +59,9 @@
 
 								endwhile;
 							endif;
-}?>
+						}
+						wp_reset_postdata();
+						?>
 
 
 			</div>

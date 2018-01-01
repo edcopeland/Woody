@@ -86,7 +86,9 @@
 			<?php
 			endif; ?>
 			</div>
-			<?php //get_sidebar(); ?>
+			<?php //get_sidebar();
+			wp_reset_postdata();
+			?>
 		</div>
 	</div>
 <?php get_footer();
