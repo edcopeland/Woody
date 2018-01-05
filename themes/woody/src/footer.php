@@ -19,7 +19,7 @@
 					</nav>
 
 					<!-- <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p> -->
-
+      <div class="footer-contacts">
 				<ul>
 						<li><?php echo contact_get_option( '_contact_options_company_name'); ?></li>
 						<li><?php echo  contact_get_option( '_contact_options_c_o');?></li>
@@ -29,7 +29,7 @@
 						<?php foreach ($address_array as &$value) { ?>
 						<li><?php echo $value ?></li>
 						<?php } ?>
-						
+
 						<li><?php echo contact_get_option( '_contact_options_town');?></li>
 						<li><?php echo contact_get_option( '_contact_options_county'); ?></li>
 						<li><?php echo contact_get_option( '_contact_options_postcode'); ?></li>
@@ -37,7 +37,7 @@
 						<li><?php echo contact_get_option( '_contact_options_url'); ?></li>
 						<li><?php echo contact_get_option( '_contact_options_email'); ?></li>
 				</ul>
-
+      </div>
 
 				</div>
 

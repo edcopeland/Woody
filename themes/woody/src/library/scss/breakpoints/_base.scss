@@ -22,6 +22,7 @@ body {
 	background-color: $white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+		margin-left: -9px;  //corrects a gap in the left margin when using .wrap{margin:auto}
 }
 
 /********************
@@ -121,14 +122,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.2em;
-	line-height: 1.333em;
+	font-size: 1.4em;
+	line-height: 1.1em;
 }
 
 h2, .h2 {
-	font-size: 1.75em;
+	font-size: 1.3em;
 	line-height: 1.4em;
-	margin-bottom: 0.375em;
+	margin: 0 0 .4em;
 }
 
 h3, .h3 {
@@ -151,7 +152,7 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
-.header {
+.header, img {
 	background-color: $white;
 }
 
@@ -164,16 +165,21 @@ HEADER STYLES
 	}
 
 .custom-logo{
-	width: 75px;
+	width: 65px;
 	height: auto;
+	margin:2px;
 	float:left;
 	z-index:10;
 	position: absolute;
 
 }
-.header-image{
-	z-index:1;
-	clear:left;
+
+.header-image img {
+	z-index: 1;
+	clear: left;
+	height: auto;
+	width: 102%;
+
 }
 
 
@@ -198,7 +204,7 @@ and more scalable.
 			display: block;
 			color: $text-color;
 			text-decoration: none;
-			padding: 0.75em;
+			padding: .4em;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -263,7 +269,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
+	margin-top: .2em;
 }
 
 		.hentry {
@@ -274,7 +280,7 @@ POSTS & CONTENT STYLES
 
 			header {
 				border-bottom: 1px solid $light-gray;
-				padding: 1.5em;
+				padding: .7em .5em .4em;
 			}
 
 			footer {
@@ -323,10 +329,11 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
+			padding: 0 .5em 0;
 
 			p {
-				margin: 0 0 1.5em;
+				margin: .5em 0 .5em;
+				font-size: 1em;
 			}
 
 
@@ -414,7 +421,7 @@ POSTS & CONTENT STYLES
 			}
 
 			img {
-				margin: 0 0 1.5em 0;
+				margin: 0 0 .5em 0;
 				max-width: 100%;
 				height: auto;
 			}
@@ -875,8 +882,9 @@ FOOTER STYLES
 	clear: both;
 	background-color: $meta-gray;
 	color: $black;
-	padding: 5em;
+	padding: 1em;
 }
+
 
 	/*
 	if you checked out the link above:
@@ -897,5 +905,17 @@ FOOTER STYLES
 
 	} /* end .footer-links */
 
+.footer-contacts {
+  margin: 0;
+
+  ul {
+		padding-left: 0;
+    li {
+			position: relative;
+      list-style: none;
+			line-height: 1.1em;
+    }
+  }
+}
 
 	.copyright {}
