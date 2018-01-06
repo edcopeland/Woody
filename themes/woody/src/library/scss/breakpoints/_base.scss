@@ -195,6 +195,45 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
+.main-nav{
+
+//  background-color: $;
+  clear: both;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 0;
+  border-radius:$bord-rad;
+	text-decoration: none;
+
+
+  .toggleMenu {
+      display:  block;
+			text-decoration: none;
+      color: $text-color;
+      padding: 10px 36%;
+      border-radius: $bord-rad;
+  }
+
+  li{
+  	ul.sub-menu,
+		ul.children {
+            display:none;
+
+    }
+    a{
+			text-decoration: none;
+
+      //  color:white;
+        &:hover, &:focus {
+          //  background-color: $;
+            border-radius:$bord-rad;
+        //    color: white;
+        }
+      }
+    }
+}
+
 .nav {
 	border-bottom: 0;
 	margin: 0;
@@ -275,7 +314,7 @@ POSTS & CONTENT STYLES
 		.hentry {
 			background-color: $light-gray;
 			border-radius: 3px;
-			margin-bottom: 1.5em;
+			margin-bottom: .5em;
 			// border: 1px solid $border-color;
 
 			header {
@@ -284,7 +323,7 @@ POSTS & CONTENT STYLES
 			}
 
 			footer {
-				padding: 1.5em;
+				padding: .5em;
 				border-top: 1px solid $light-gray;
 
 				p {
@@ -418,10 +457,11 @@ POSTS & CONTENT STYLES
 				font-size: 0.9em;
 				color: #787878;
 				margin-bottom: 1.5em;
+				
 			}
 
 			img {
-				margin: 0 0 .5em 0;
+				margin: .4em 0 .5em 0;
 				max-width: 100%;
 				height: auto;
 			}
