@@ -47,7 +47,7 @@
 									<header  id = "post-head" class="article-header">
                     <?php
                         if ( has_post_thumbnail() ) {
-                            the_post_thumbnail('all-post-img',array( 'id' => 'all-posts-thumb'));
+                            the_post_thumbnail('news-thumb',array( 'id' => 'all-posts-thumb'));
                         }
                         ?>
 												<?php
