@@ -553,7 +553,7 @@ PAGE NAVI STYLES
 
 .pagination,
 .wp-prev-next {
-	margin: 1.5em 0;
+	margin: 1.6em 0;
 }
 	.pagination{
     text-align: center;
@@ -562,34 +562,39 @@ PAGE NAVI STYLES
       display: inline-block;
       background-color: $white;
       white-space: nowrap;
+
       padding: 0;
       clear: both;
       border-radius: 3px;
     }
 
     li {
-      padding: 0;
-      margin: 0;
+    //  padding: 0;
+    //  margin: 0;
       float: left;
       display: inline;
       overflow: hidden;
+			padding: 2em 0.5em;
+			min-width: 2em;
+
       border-right: 1px solid $gray;
+			display: block;
+
+
     }
 
     a, span {
       margin: 0;
       text-decoration: none;
-      padding: 0;
-      line-height: 1em;
+      line-height: 1.4em;
       font-size: 1em;
       font-weight: normal;
-      padding: 0.75em;
-      min-width: 1em;
+  //    padding: 0.75em;
       display: block;
-      color: $blue;
+      color: $green;
 
       &:hover, &:focus {
-      	background-color: $blue;
+      	background-color: $green;
       	color: $white;
       }
     }
