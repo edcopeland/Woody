@@ -547,6 +547,38 @@ POSTS & CONTENT STYLES
 		margin: 0;
 	}
 
+
+/************************************************
+post styles
+*************************************************/
+.attachment-news-thumb{
+	width: auto;
+	max-height: 95px;
+	margin-bottom: -2em;
+	//display: none;
+}
+.activity-dates {
+	float: right;
+}
+
+.entry-content{
+	//overflow:auto;
+	.page-title{
+		margin-top: 2em;
+		font-size: 1.1em;
+	}
+	#more-link{
+		float:right;
+		text-decoration: none;
+	}
+}
+.clearfix{
+	clear: both;
+}
+
+.excerpt-read-more {
+	display:none;
+}
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

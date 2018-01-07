@@ -70,7 +70,7 @@
 
 					<div id = "nav-container">
 						<nav id= "main-nav" class= "main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-							<a class="toggleMenu" href="#"> &#9776; Menu</a>
+							<a class="toggleMenu" href="#">  Menu &nbsp; &#9776; </a>
 							<?php wp_nav_menu(array(
 	    					         'container' => false,                           // remove nav container
 	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)

@@ -277,5 +277,4 @@ add_theme_support( 'custom-header',$args );
 
 
 
-
 /* DON'T DELETE THIS CLOSING TAG */ ?>

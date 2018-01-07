@@ -54,10 +54,12 @@
 													// Grab the metadata from the database
 													$start_date = get_post_meta( get_the_ID(), 'woody_post_start_date', true );
 													$end_date = get_post_meta( get_the_ID(), 'woody_post_end_date', true );
+													if ($end_date) $dates = $start_date .' - ' .$end_date;
+													else $dates = $start_date;
 
 													// Echo the metadata
-													echo '<div>'. esc_html( $start_date ) .'</div>';
-													echo '<div>'. esc_html( $end_date ).'</div>';
+													echo '<div class= "activity-dates">'. esc_html( $dates ) .'</div>';
+
 
 													?>
                   </header>
@@ -68,8 +70,7 @@
                      	<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
                     <a id="more-link" href="<?php echo get_permalink(); ?>"> Read More...</a>
 									</section>
-                                                              <!-- Start date and end date-->
-
+									<div class="clearfix"></div>
                   <footer class="article-footer">
 
                   </footer>
@@ -85,7 +86,7 @@
 			<article id="post-not-found" class="hentry cf">
 					<header class="article-header">
 						<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-	                                                                          </header>
+	        </header>
 					<section class="entry-content">
 						<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
           </section>

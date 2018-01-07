@@ -58,8 +58,7 @@
                      	<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
                     <a id="more-link" href="<?php echo get_permalink(); ?>"> Read More...</a>
 									</section>
-                                                              <!-- Start date and end date-->
-
+									<div class="clearfix"></div>
                   <footer class="article-footer">
 
                   </footer>
