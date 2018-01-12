@@ -52,12 +52,46 @@
 								);
 							 $loop = new WP_Query( $args );
 							  if (have_posts()) :
-							  while ( $loop->have_posts() ) : $loop->the_post();
-								?>
-								<h2  class="page-title"> <a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?>  </a> </h2>
-									<?php
+							  while ( $loop->have_posts() ) : $loop->the_post();?>
+								<article  id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+									<div class="page-post">
+										<header  id = "post-head" class="article-header">
+											<?php
+													if ( has_post_thumbnail() ) {
+															the_post_thumbnail('news-thumb',array( 'id' => 'all-posts-thumb'));
+													}
+													?>
+										</header>
+
+										<section id="section" class="entry-content cf" itemprop="articleBody">
+											<h2  class="page-title"> <a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?>  </a> </h2>
+												<?php  the_excerpt(); ?>
+												<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+											<a id="more-link" href="<?php echo get_permalink(); ?>"> Read More...</a>
+										</section>
+										<div class="clearfix"></div>
+										<footer class="article-footer">
+
+										</footer>
+
+									</div>
+								</article>
+						<?php
 
 								endwhile;
+								else : ?>
+								<article id="post-not-found" class="hentry cf">
+										<header class="article-header">
+											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+						                                                                          </header>
+										<section class="entry-content">
+											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+					          </section>
+					          <footer class="article-footer">
+											<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
+					          </footer>
+								</article>
+								<?php
 							endif;
 						}
 						wp_reset_postdata();
