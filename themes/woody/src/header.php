@@ -68,7 +68,7 @@
 
 					</div>
 
-					<div id = "nav-container">
+					<div id = "nav-container" class ="nav-container">
 						<nav id= "main-nav" class= "main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<a class="toggleMenu" href="#">  Menu &nbsp; &#9776; </a>
 							<?php wp_nav_menu(array(

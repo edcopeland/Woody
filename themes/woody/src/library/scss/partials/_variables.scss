@@ -27,8 +27,13 @@ $white:             #fff;
 
 $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
-$text-color:        #5c6b80;
+
 $meta-gray:         #9fa6b4;
+$gray-l10:          lighten($meta-gray,10%);
+$gray-l5:          lighten($meta-gray,5%);
+$gray-d5:       darken($meta-gray,5%);
+$gray-d10:      darken($meta-gray,10%);
+$gray-d20:      darken($meta-gray,20%);
 $highlight-green:   #6b892a;
 
 $tan:               #eceee5;
@@ -43,6 +48,9 @@ $link-hover:        lighten($link-color, 15%);
 
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;
+$boarder-color:     $gray-l10;
+$text-color:        $gray-d20;
+
 
 $bord-rad:          3px;
 

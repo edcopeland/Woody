@@ -175,11 +175,16 @@ HEADER STYLES
 
 }
 
-.header-image img {
-	z-index: 1;
-	clear: left;
-	height: auto;
-	width: 102%;
+
+.header-image {
+margin-bottom: 0;
+	img {
+		z-index: 1;
+		clear: left;
+		height: auto;
+		width: 102%;
+
+	}
 
 }
 
@@ -196,55 +201,41 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
-.main-nav{
-
-//  background-color: $;
+.main-nav {
   clear: both;
-  margin: 0 auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
   border-bottom: 0;
   border-radius:$bord-rad;
 	text-decoration: none;
 
+.toggleMenu {
+	border: 2px solid $boarder-color;
+	border-radius: $bord-rad;
+  color: $text-color;
+	font-size: 1.2em;
+	margin: 0 1%;
+	padding: 10px 37%;
+	position: relative;
+	text-decoration: none;
+	width: 25%;
 
-  .toggleMenu {
-      display:  block;
-			text-decoration: none;
-      color: $text-color;
-      padding: 10px 36%;
-      border-radius: $bord-rad;
   }
 
   li{
+		list-style: none;
+
   	ul.sub-menu,
 		ul.children {
-            display:none;
+      display: none;
 
     }
     a{
 			text-decoration: none;
-
-      //  color:white;
-        &:hover, &:focus {
-          //  background-color: $;
-            border-radius:$bord-rad;
-        //    color: white;
-        }
-      }
-    }
-}
-
-.nav {
-	border-bottom: 0;
-	margin: 0;
-	li {
-	list-style: none;
-		a {
-			display: block;
+			border-bottom: 1px solid $boarder-color;
 			color: $text-color;
-			text-decoration: none;
-			padding: .4em;
+			display: block;
+			padding: .3em .4em .6em;
+			width: 82%;
+
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -252,57 +243,61 @@ and more scalable.
 			the style.scss file where it's relevant. We want to
 			keep this file as small as possible!
 			*/
-			&:hover, &:focus {
-			}
-		}
+        &:hover, &:focus {
+        }
+      }
 
-		&:first-child {}
+			&:first-child {}
 
-		&:last-child {}
+			&:last-child {}
 
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
-		ul.sub-menu,
-		ul.children {
+			/*
+			so you really have to rethink your dropdowns for mobile.
+			you don't want to have it expand too much because the
+			screen is so small. How you manage your menu should
+			depend on the project. Here's some great info on it:
+			http://www.alistapart.com/articles/organizing-mobile/
+			*/
+			ul.sub-menu,
+			ul.children {
 
-			li {
+				li {
 
-				a {
-					padding-left: 30px;
+					a {
+						//padding-left: 30px;
 
-					&:hover,
-					&:focus {}
+						&:hover,
+						&:focus {}
 
-					&:link {}
+						&:link {}
+
+					}
+
+					&:first-child {}
+
+					&:last-child {}
 
 				}
 
-				&:first-child {}
-
-				&:last-child {}
-
 			}
+    }
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
 
-		}
+			a {}
 
-	} /* end .menu li */
+		}  /* end current highlighters */
 
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
+	} /* end .nav */
 
-		a {}
 
-	}  /* end current highlighters */
 
-} /* end .nav */
 
+.nav {
+	margin: 0;
+}
 
 /*********************
 POSTS & CONTENT STYLES
