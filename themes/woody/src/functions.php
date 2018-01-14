@@ -75,7 +75,8 @@ if ( ! isset( $content_width ) ) {
 // Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
-add_image_size( 'news-thumb', 200, 200, FALSE );
+add_image_size( 'news-thumb', 355, 295, FALSE );
+
 
 /*
 to add more sizes, simply copy a line from above
@@ -103,12 +104,12 @@ function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'bones-thumb-600' => __('600px by 150px'),
         'bones-thumb-300' => __('300px by 100px'),
-        'news-thumb'      => __('200px by 200px'),
+        'news-thumb'      => __('380px by 350px'),
     ) );
 }
 
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 200, 200 , False);
+//set_post_thumbnail_size( 200, 200 , False);
 
 /*
 The function above adds the ability to use the dropdown menu to select

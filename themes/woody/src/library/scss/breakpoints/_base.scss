@@ -208,7 +208,7 @@ and more scalable.
 	text-decoration: none;
 
 .toggleMenu {
-	border: 2px solid $boarder-color;
+	border: 1px solid $boarder-color;
 	border-radius: $bord-rad;
   color: $text-color;
 	font-size: 1.2em;
@@ -219,6 +219,9 @@ and more scalable.
 	width: 25%;
 
   }
+ul{
+	margin-bottom: 1em;
+	margin-top: .5em;
 
   li{
 		list-style: none;
@@ -289,8 +292,8 @@ and more scalable.
 			a {}
 
 		}  /* end current highlighters */
-
-	} /* end .nav */
+	}/*end ul*/
+ } /* end .main-nav */
 
 
 
@@ -307,6 +310,9 @@ POSTS & CONTENT STYLES
 	margin-top: .2em;
 }
 
+.section{
+
+}
 		.hentry {
 			background-color: $light-gray;
 			border-radius: 3px;
@@ -315,7 +321,7 @@ POSTS & CONTENT STYLES
 
 			header {
 				border-bottom: 1px solid $light-gray;
-				padding: .7em .5em .4em;
+				padding: .5em .5em .4em;
 			}
 
 			footer {
@@ -333,6 +339,8 @@ POSTS & CONTENT STYLES
 		.page-title,
 		.entry-title {
 			margin: 0;
+			clear:both;
+			font-size: 1.2em;
 		}
 
 		.single-title {}
@@ -363,13 +371,44 @@ POSTS & CONTENT STYLES
 		}
 
 		/* entry content */
+		.attachment-bones-thumb-600{
+
+			text-align: center;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			clear: both;
+
+		}
+		.activity-dates {
+			margin-bottom: .5em;
+			float: left;
+			font-size: .8em;
+		}
+
+
+		.clearfix{
+			clear: both;
+		}
+
+
+
 		.entry-content {
 			padding: 0 .5em 0;
+
+			.page-title{
+				margin-top: 2em;
+				font-size: 1.1em;
+			}
+
 
 			p {
 				margin: .5em 0 .5em;
 				font-size: 1em;
+				clear: both;
 			}
+
+
 
 
 			ul, ol, table, dl {}
@@ -392,6 +431,14 @@ POSTS & CONTENT STYLES
 
 			}
 
+			#more-link{
+				float:right;
+				text-decoration: none;
+			}
+			.excerpt-read-more {
+				display:none;
+			}
+			
 			table {
 				width: 100%;
 				border: 1px solid $gray;
@@ -451,13 +498,12 @@ POSTS & CONTENT STYLES
 			dd {
 				margin-left: 0;
 				font-size: 0.9em;
-				color: #787878;
+				color: $gray-d5;
 				margin-bottom: 1.5em;
 
 			}
-
 			img {
-				margin: .4em 0 .5em 0;
+				margin: .5em auto;
 				max-width: 100%;
 				height: auto;
 			}
@@ -543,37 +589,8 @@ POSTS & CONTENT STYLES
 	}
 
 
-/************************************************
-post styles
-*************************************************/
-.attachment-news-thumb{
-	width: auto;
-	max-height: 95px;
-	margin-bottom: -2em;
-	//display: none;
-}
-.activity-dates {
-	float: right;
-}
 
-.entry-content{
-	//overflow:auto;
-	.page-title{
-		margin-top: 2em;
-		font-size: 1.1em;
-	}
-	#more-link{
-		float:right;
-		text-decoration: none;
-	}
-}
-.clearfix{
-	clear: both;
-}
 
-.excerpt-read-more {
-	display:none;
-}
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

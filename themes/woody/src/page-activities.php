@@ -56,25 +56,29 @@
 								<article  id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 									<div class="page-post">
 										<header  id = "post-head" class="article-header">
-											<?php
-													if ( has_post_thumbnail() ) {
-															the_post_thumbnail('news-thumb',array( 'id' => 'all-posts-thumb'));
-													}
-													?>
-										</header>
+											<h2  class="page-title">
+												<a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?>  </a>
+											</h2>
+
+	                  </header>
 
 										<section id="section" class="entry-content cf" itemprop="articleBody">
-											<h2  class="page-title"> <a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?>  </a> </h2>
-												<?php  the_excerpt(); ?>
-												<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-											<a id="more-link" href="<?php echo get_permalink(); ?>"> Read More...</a>
+											<?php
+													if ( has_post_thumbnail() ) {
+															the_post_thumbnail('bones-thumb-600',array( 'id' => 'all-posts-thumb'));
+															 //the_post_thumbnail( 'bones-thumb-600' );
+													}
+													?>
+	                    	<?php  the_excerpt(); ?>
+	                     	<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+	                    <a id="more-link" href="<?php echo get_permalink(); ?>"> More....</a>
 										</section>
 										<div class="clearfix"></div>
-										<footer class="article-footer">
+	                  <footer class="article-footer">
 
-										</footer>
+	                  </footer>
 
-									</div>
+		              </div>
 								</article>
 						<?php
 
