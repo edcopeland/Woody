@@ -11,3 +11,5 @@ notes.txt
 debug.log
 mu-plugins/cmb2/languages/
 plugins/
+ai1wm-backups/
+.gitignore
