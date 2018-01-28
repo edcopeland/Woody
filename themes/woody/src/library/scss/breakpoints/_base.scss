@@ -152,11 +152,12 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
-.header, img {
-
-	background-color: $white;
+.header {
+	margin: .2em .2em 0 .2em;
+ 	img {
+		background-color: $white;
+	}
 }
-
 	#logo {
 		margin: 0.75em 0;
 
@@ -252,7 +253,11 @@ ul{
 
 			&:first-child {}
 
-			&:last-child {}
+			&:last-child {
+				a {
+					border-bottom: 0;
+				}
+			}
 
 			/*
 			so you really have to rethink your dropdowns for mobile.
@@ -314,9 +319,11 @@ POSTS & CONTENT STYLES
 
 }
 		.hentry {
+			border: 1px solid $gray-l10;
+
 			background-color: $light-gray;
 			border-radius: 3px;
-			margin-bottom: .5em;
+			margin: .5em 0 0 .2em;
 			// border: 1px solid $border-color;
 
 			header {
@@ -325,7 +332,6 @@ POSTS & CONTENT STYLES
 			}
 
 			footer {
-				padding: .5em;
 				border-top: 1px solid $light-gray;
 
 				p {
@@ -338,7 +344,7 @@ POSTS & CONTENT STYLES
 		.single-title,
 		.page-title,
 		.entry-title {
-			margin: 0;
+			margin: .4em 0 .1em 0;
 			clear:both;
 			font-size: 1.2em;
 		}
@@ -438,7 +444,7 @@ POSTS & CONTENT STYLES
 			.excerpt-read-more {
 				display:none;
 			}
-			
+
 			table {
 				width: 100%;
 				border: 1px solid $gray;
@@ -613,14 +619,13 @@ PAGE NAVI STYLES
     }
 
     li {
-    //  padding: 0;
-    //  margin: 0;
+
       float: left;
       display: inline;
       overflow: hidden;
 			padding: 2em 0.5em;
 			min-width: 2em;
-
+			min-height: 1.5em;
       border-right: 1px solid $gray;
 			display: block;
 
@@ -930,21 +935,34 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+	border: 1px solid $gray-l10;
+	background-color: $light-gray;
+	width:95%;
+	padding: 1em .8em 2em 1em;
+	margin: 2em .3em;
+}
 
-	.widgettitle {}
+	.widgettitle {
+		margin: .5em 2em 0 0;
+		font-size: 1.3em;
+		border-bottom: 1px solid $border-color;
+
+	}
 
 	.widget {
 
 		ul {
-
 			li {
-
+				list-style: none;
 				&:first-child {}
 
 				&:last-child {}
 
-				a {}
+				a {
+					text-decoration: none;
+
+				}
 
 				/* deep nesting */
 				ul {}
@@ -953,6 +971,35 @@ SIDEBARS & ASIDES
 
 		}
 
+	}
+
+	.widget-activity-type {
+		margin-top: .6em;
+		margin-bottom: .1em;
+		padding-left: .2em;
+		font-size: 1.1em;
+
+		ul {
+			padding-left: .9em;
+
+		}
+		li {
+
+		}
+	}
+
+	.widget-activity {
+		font-size: 1em;
+
+		ul {
+		}
+		li {
+			padding: .1em;
+		}
+	}
+
+	.searchform {
+		width: 85%;
 	}
 
 	.no-widgets {
@@ -972,7 +1019,7 @@ FOOTER STYLES
 	clear: both;
 	background-color: $meta-gray;
 	color: $black;
-	padding: 1em;
+	padding: .4em 1em;
 }
 
 

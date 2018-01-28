@@ -75,8 +75,8 @@ class Activity_Widget extends WP_Widget
 		foreach ($cats as $cat){
 
 			$category_link = get_category_link( $cat->term_id );?>
-		<ul>
-			<li> <a href="<?php echo esc_url( $category_link ); ?>" title="Category Name"><?php echo $cat->name?></a></li>
+		<ul class="widget-activity-type">
+			<li class="widget-activity-type"> <a  href="<?php echo esc_url( $category_link ); ?>" title="Category Name"><?php echo $cat->name?></a></li>
 	<?php $cat_id= $cat->term_id;
 				$args=array(
 					'posts_per_page' => $number_of_posts,
@@ -90,8 +90,8 @@ class Activity_Widget extends WP_Widget
 			 $loop = new WP_Query( $args );
 				if (have_posts()){
 				while ( $loop->have_posts() ) : $loop->the_post();?>
-						<ul>
-							<li>
+						<ul class="widget-activity">
+							<li class="widget-activity">
 								<a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?>  </a>
 							</li>
 						</ul>
