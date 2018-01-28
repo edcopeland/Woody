@@ -276,7 +276,7 @@ $args = array(
 
 add_theme_support( 'custom-header',$args );
 
-function my_theme_archive_title( $title ) {
+function theme_archive_title( $title ) {
     if ( is_category() ) {
         $title = single_cat_title( '', false );
     } elseif ( is_tag() ) {
@@ -288,11 +288,15 @@ function my_theme_archive_title( $title ) {
     } elseif ( is_tax() ) {
         $title = single_term_title( '', false );
     }
+    elseif ( is_month() ) {
+        /* translators: Monthly archive title. 1: Month name and year */
+        $title = sprintf( __( ' %s' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) );
 
+    }
     return $title;
 }
 
-add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+add_filter( 'get_the_archive_title', 'theme_archive_title' );
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
