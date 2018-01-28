@@ -318,17 +318,18 @@ POSTS & CONTENT STYLES
 .section{
 
 }
+
+
 		.hentry {
+
 			border: 1px solid $gray-l10;
 
 			background-color: $light-gray;
 			border-radius: 3px;
 			margin: .5em 0 0 .2em;
-			// border: 1px solid $border-color;
-
 			header {
 				border-bottom: 1px solid $light-gray;
-				padding: .5em .5em .4em;
+				padding: .5em .5em 0;
 			}
 
 			footer {
@@ -340,9 +341,20 @@ POSTS & CONTENT STYLES
 			}
 
 		} /* end .hentry */
+		.news-page,
+		.locations-page,
+		.activities-page {
+			border: 0;
+			background-color: white;
+			margin-bottom: -.6em;
+		}
 
+		.page-title{
+			margin: .6em 0 .5em .5em;
+			clear:both;
+			font-size: 1.2em;
+		}
 		.single-title,
-		.page-title,
 		.entry-title {
 			margin: .4em 0 .1em 0;
 			clear:both;
