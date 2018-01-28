@@ -18,7 +18,7 @@
 			<div id="main" class="m-all t-all d-7of7 cf" role="main">
         <?php
         while (have_posts()) : the_post(); ?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'cf','activities-page') ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						<header class="article-header">
 							<h1 class="page-title"><?php the_title(); ?></h1>
 						</header>
