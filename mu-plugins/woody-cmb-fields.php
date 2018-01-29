@@ -209,17 +209,10 @@ function woody_register_post_metabox() {
 
 
   $woody_locations->add_field( array(
-    'name' => 'Start Date',
-    'id'   => 'woody_post_start_date',
-    'type' => 'text_date',
-    'date_format' => 'M Y',
- ) );
-
-  $woody_locations->add_field( array(
    'name' => 'End Date',
    'id'   => 'woody_post_end_date',
    'type' => 'text_date',
-   'date_format' => 'M Y',
+   'date_format' => 'F Y',
  ) );
 
   $woody_locations->add_field( array(
