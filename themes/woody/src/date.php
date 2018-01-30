@@ -41,7 +41,13 @@
 
 								<section class="entry-content cf">
 
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+                  <?php
+                  if ( has_post_thumbnail() ) {
+                      the_post_thumbnail('bones-thumb-600',array( 'id' => 'all-posts-thumb'));
+                       //the_post_thumbnail( 'bones-thumb-600' );
+                  }
+
+                   ?>
 
 									<?php the_excerpt(); ?>
 

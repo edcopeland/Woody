@@ -18,13 +18,17 @@
 								<header class="entry-header article-header">
 
 									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-				
+
 								</header>
 
 								<section class="entry-content cf">
+                  <?php
+                  if ( has_post_thumbnail() ) {
+                      the_post_thumbnail('bones-thumb-600',array( 'id' => 'all-posts-thumb'));
+                       //the_post_thumbnail( 'bones-thumb-600' );
+                  }
 
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-
+                   ?>
 									<?php the_excerpt(); ?>
 
 								</section>
