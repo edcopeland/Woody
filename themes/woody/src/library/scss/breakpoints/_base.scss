@@ -319,292 +319,314 @@ POSTS & CONTENT STYLES
 
 }
 
-
-		.hentry {
-
-			border: 1px solid $gray-l10;
-
-			background-color: $light-gray;
-			border-radius: 3px;
-			margin: .5em 0 0 .2em;
-			header {
-				border-bottom: 1px solid $light-gray;
-				padding: .5em .5em 0;
-			}
-
-			footer {
-				border-top: 1px solid $light-gray;
-
-				p {
-					margin: 0;
-				}
-			}
-
-		} /* end .hentry */
-		.news-page,
-		.locations-page,
-		.activities-page {
-			border: 0;
-			background-color: white;
-			margin-bottom: -.6em;
-		}
-
-		.page-title{
-			margin: .6em 0 .5em .5em;
-			clear:both;
-			font-size: 1.2em;
-		}
-		.single-title,
-		.entry-title {
-			margin: .4em 0 .1em 0;
-			clear:both;
-			font-size: 1.2em;
-		}
-
-		.single-title {}
-
-		.page-title {}
-
-		.entry-title {}
-
-		.archive-title {}
-
-		/* want to style individual post classes? Booya! */
-		.post-id {}         /* post by id (i.e. post-3) */
-		.post {}            /* general post style */
-		.page {}            /* general article on a page style */
-		.attachment {}      /* general style on an attatchment */
-		.sticky {}          /* sticky post style */
-		.hentry {}          /* hentry class */
-		.category-slug {}   /* style by category (i.e. category-videos) */
-		.tag-slug {}        /* style by tag (i.e. tag-news) */
-
-		/* post meta */
-		.byline {
-			color: $meta-gray;
-			font-style: italic;
-			margin: 0;
-
-			time {}
-		}
-
-		/* entry content */
-		.attachment-bones-thumb-600{
-
-			text-align: center;
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			clear: both;
-
-		}
-		.activity-dates {
-			margin-bottom: .5em;
-			float: left;
-			font-size: .8em;
-		}
-
-
-		.clearfix{
-			clear: both;
-		}
-
-
-
-		.entry-content {
-			padding: 0 .5em 0;
-
-			.page-title{
-				margin-top: 2em;
-				font-size: 1.1em;
-			}
-
-
-			p {
-				margin: .5em 0 .5em;
-				font-size: 1em;
-				clear: both;
-			}
-
-
-
-
-			ul, ol, table, dl {}
-
-			ul, ol {
-
-				li {}
-
-			}
-
-			ul {
-
-				li {}
-
-			}
-
-			ol {
-
-				li {}
-
-			}
-
-			#more-link{
-				float:right;
-				text-decoration: none;
-			}
-			.excerpt-read-more {
-				display:none;
-			}
-
-			table {
-				width: 100%;
-				border: 1px solid $gray;
-				margin-bottom: 1.5em;
-
-				caption {
-					margin: 0 0 7px;
-					font-size: 0.75em;
-					color: $meta-gray;
-					text-transform: uppercase;
-					letter-spacing: 1px;
-				}
-			}
-
-			tr {
-				border-bottom: 1px solid $gray;
-
-				&:nth-child(even) {
-					background-color: $light-gray;
-				}
-			}
-
-			td {
-				padding: 7px;
-				border-right: 1px solid $gray;
-
-				&:last-child {
-					border-right: 0;
-				}
-			}
-
-			th {
-				background-color: $light-gray;
-				border-bottom: 1px solid $gray;
-				border-right: 1px solid $gray;
-
-				&:last-child {
-					border-right: 0;
-				}
-			}
-
-			blockquote {
-				margin: 0 0 1.5em 0.75em;
-				padding: 0 0 0 0.75em;
-				border-left: 3px solid $blue;
-				font-style: italic;
-				color: $meta-gray;
-
-				&:before {}
-
-			}
-
-			dl {}
-
-			dt {}
-
-			dd {
-				margin-left: 0;
-				font-size: 0.9em;
-				color: $gray-d5;
-				margin-bottom: 1.5em;
-
-			}
-			img {
-				margin: .5em auto;
-				max-width: 100%;
-				height: auto;
-			}
-
-			/*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
-			.alignleft, img.alignleft {}
-			.alignright, img.alignright {}
-			.aligncenter, img.aligncenter {}
-
-			.size-auto,
-			.size-full,
-			.size-large,
-			.size-medium,
-			.size-thumbnail {
-				max-width: 100%;
-				height: auto;
-			}
-
-			pre {
-				background: $black;
-				color: $light-gray;
-				font-size: 0.9em;
-				padding: 1.5em;
-				margin: 0 0 1.5em;
-				border-radius: 3px;
-			}
-
-		} /* end .entry-content */
-
-		.wp-caption {
-			max-width: 100%;
-			background: #eee;
-			padding: 5px;
-
-			/* images inside wp-caption */
-			img {
-				max-width: 100%;
-				margin-bottom: 0;
-				width: 100%;
-			}
-
-			p.wp-caption-text {
-				font-size: 0.85em;
-				margin: 4px 0 7px;
-				text-align: center;
-			}
-
-		} /* end .wp-caption */
-
-		/* image gallery styles */
-		.gallery {
-
-			dl {
-
-				a {}
-
-				img {}
-
-			}
-
-			dt {}
-
-			dd {}
-
-		} /* end .gallery */
-
-		/* gallery caption styles */
-		.gallery-caption {}
-
-		.size-full {}
-		.size-large {}
-		.size-medium {}
-		.size-thumbnail {}
-
-	// the tag output
-	.tags {
-		margin: 0;
+.category-name{
+	margin: 2em 0 .5em .6em;
+}
+
+.front-page-title{
+	margin: 1em 0 .5em .4em;
+}
+.hentry {
+
+	border: 1px solid $gray-l10;
+	background-color: $light-gray;
+	border-radius: 3px;
+	margin: .5em 0 0 .2em;
+	header {
+		border-bottom: 1px solid $light-gray;
+		padding: .5em .5em 0;
 	}
+
+	footer {
+		border-top: 1px solid $light-gray;
+
+		p {
+			margin: 0;
+		}
+	}
+
+} /* end .hentry */
+
+.news-page,
+.locations-page,
+.activities-page {
+	border: 0;
+	background-color: white;
+	margin-bottom: -.6em;
+
+	p {
+		border: 1px solid $gray-l10;
+		background-color: $light-gray;
+		border-radius: 3px;
+		margin-bottom: 0;
+		padding: .8em;
+	}
+}
+
+
+.page-title{
+	margin: .6em 0 .5em .1em;
+	clear:both;
+	font-size: 1.2em;
+}
+
+.page-post{
+	.page-title{
+		margin: .4em 0 .1em 0;
+	}
+}
+.single-title,
+.entry-title {
+	margin: .4em 0 .1em 0;
+	clear:both;
+	font-size: 1.2em;
+}
+
+
+.single-title {}
+
+.entry-time{
+	font-size: .9em;
+}
+
+.archive-title {}
+
+/* want to style individual post classes? Booya! */
+.post-id {}         /* post by id (i.e. post-3) */
+.post {}            /* general post style */
+.page {}            /* general article on a page style */
+.attachment {}      /* general style on an attatchment */
+.sticky {}          /* sticky post style */
+.hentry {}          /* hentry class */
+.category-slug {}   /* style by category (i.e. category-videos) */
+.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+/* post meta */
+.byline {
+	color: $meta-gray;
+	font-style: italic;
+	margin: 0;
+
+	time {}
+}
+
+/* entry content */
+.attachment-bones-thumb-600{
+
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+
+}
+.activity-dates {
+	margin-bottom: .5em;
+	float: left;
+	font-size: .8em;
+}
+
+
+.clearfix{
+	clear: both;
+}
+
+
+
+.entry-content {
+	padding: 0 .5em 0;
+
+	.page-title{
+		margin-top: 2em;
+		font-size: 1.1em;
+	}
+
+
+	p {
+		margin: .5em 0 .5em;
+		font-size: 1em;
+		clear: both;
+	}
+
+
+
+
+	ul, ol, table, dl {}
+
+	ul, ol {
+
+		li {}
+
+	}
+
+	ul {
+
+		li {}
+
+	}
+
+	ol {
+
+		li {}
+
+	}
+
+	#more-link{
+		float:right;
+		text-decoration: none;
+	}
+	.excerpt-read-more {
+		display:none;
+	}
+
+	table {
+		width: 100%;
+		border: 1px solid $gray;
+		margin-bottom: 1.5em;
+
+		caption {
+			margin: 0 0 7px;
+			font-size: 0.75em;
+			color: $meta-gray;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+	}
+
+	tr {
+		border-bottom: 1px solid $gray;
+
+		&:nth-child(even) {
+			background-color: $light-gray;
+		}
+	}
+
+	td {
+		padding: 7px;
+		border-right: 1px solid $gray;
+
+		&:last-child {
+			border-right: 0;
+		}
+	}
+
+	th {
+		background-color: $light-gray;
+		border-bottom: 1px solid $gray;
+		border-right: 1px solid $gray;
+
+		&:last-child {
+			border-right: 0;
+		}
+	}
+
+	blockquote {
+		margin: 0 0 1.5em 0.75em;
+		padding: 0 0 0 0.75em;
+		border-left: 3px solid $blue;
+		font-style: italic;
+		color: $meta-gray;
+
+		&:before {}
+
+	}
+
+	dl {}
+
+	dt {}
+
+	dd {
+		margin-left: 0;
+		font-size: 0.9em;
+		color: $gray-d5;
+		margin-bottom: 1.5em;
+
+	}
+	img {
+		margin: .5em auto;
+		max-width: 100%;
+		height: auto;
+	}
+
+	/*
+	image alignment on a screen this size may be
+	a bit difficult. It's set to start aligning
+	and floating images at the next breakpoint,
+	but it's up to you. Feel free to change it up.
+	*/
+	.alignleft, img.alignleft {}
+	.alignright, img.alignright {}
+	.aligncenter, img.aligncenter {}
+
+	.size-auto,
+	.size-full,
+	.size-large,
+	.size-medium,
+	.size-thumbnail {
+		max-width: 100%;
+		height: auto;
+	}
+
+	pre {
+		background: $black;
+		color: $light-gray;
+		font-size: 0.9em;
+		padding: 1.5em;
+		margin: 0 0 1.5em;
+		border-radius: 3px;
+	}
+
+} /* end .entry-content */
+
+.wp-caption {
+	max-width: 100%;
+	background: #eee;
+	padding: 5px;
+
+	/* images inside wp-caption */
+	img {
+		max-width: 100%;
+		margin-bottom: 0;
+		width: 100%;
+	}
+
+	p.wp-caption-text {
+		font-size: 0.85em;
+		margin: 4px 0 7px;
+		text-align: center;
+	}
+
+} /* end .wp-caption */
+
+/* image gallery styles */
+.gallery {
+
+	dl {
+
+		a {}
+
+		img {}
+
+	}
+
+	dt {}
+
+	dd {}
+
+} /* end .gallery */
+
+/* gallery caption styles */
+.gallery-caption {}
+
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+
+// the tag output
+.tags {
+margin: 0;
+}
 
 
 

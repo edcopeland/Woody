@@ -17,7 +17,8 @@
 		<div id="inner-content" class="wrap cf">
 			<div id="main" class="m-all t-all d-7of7 cf" role="main">
         <?php
-        while (have_posts()) : the_post(); ?>
+        while (have_posts()) : the_post();
+				?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'cf','activities-page') ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						<header class="article-header">
 							<h1 class="page-title"><?php the_title(); ?></h1>
@@ -34,12 +35,17 @@
 							</footer> -->
 						</article>
 
-						<?php endwhile;?>
+
+					<?php
+				endwhile;?>
 
 						<?php $cats = get_terms('activity_type');
 						foreach ($cats as $cat){
+
 							// Make a header for the cateogry
-							echo "<h2>".$cat->name."</h2>";
+							echo "<div class='category-name'>";
+							echo "<h2 >".$cat->name."</h2>";
+							echo "</div>";
 								$cat_id= $cat->term_id;
 								$args=array(
 									'posts_per_page' => -1,

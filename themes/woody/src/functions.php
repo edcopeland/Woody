@@ -291,7 +291,6 @@ function theme_archive_title( $title ) {
     elseif ( is_month() ) {
         /* translators: Monthly archive title. 1: Month name and year */
         $title = sprintf( __( ' %s' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) );
-
     }
     return $title;
 }

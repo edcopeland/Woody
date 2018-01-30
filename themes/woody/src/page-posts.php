@@ -53,26 +53,20 @@
 											$end_date = get_post_meta( get_the_ID(), 'woody_post_end_date', true );
 											if ($end_date) :
 												printf( __( '', 'bonestheme' ).' %1$s - %2$s',
-																				 /* the time the post was published */
-																				 '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-																				 '<time class="updated entry-time"  >' . $end_date . '</time>'
+																 /* the time the post was published */
+																 '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+																 '<time class="updated entry-time"  >' . $end_date . '</time>'
 
 																			);
 											else :
 												printf( __( '', 'bonestheme' ).' %1$s ',
-																				 /* the time the post was published */
-																				 '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+																/* the time the post was published */
+																'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
 
 																			);
 											endif;
 											 ?>
 										</p>
-												<?php
-													// Grab the metadata from the database
-
-
-
-													?>
 
                   </header>
 
