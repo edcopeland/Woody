@@ -29,6 +29,7 @@ $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
 
 $meta-gray:         #9fa6b4;
+$gray-l25:          lighten($meta-gray,25%);
 $gray-l20:          lighten($meta-gray,20%);
 $gray-l10:          lighten($meta-gray,10%);
 $gray-l5:          lighten($meta-gray,5%);

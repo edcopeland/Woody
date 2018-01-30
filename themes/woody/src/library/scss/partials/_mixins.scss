@@ -71,3 +71,9 @@ probably best not to use it. I mean, were you going to anyway? */
 }
 
 
+@mixin box-styles {
+  border: 1px solid $gray-l20;
+	background-color: $light-gray;
+  border-radius: 5px;
+
+}

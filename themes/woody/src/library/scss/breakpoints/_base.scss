@@ -328,9 +328,7 @@ POSTS & CONTENT STYLES
 }
 .hentry {
 
-	border: 1px solid $gray-l10;
-	background-color: $light-gray;
-	border-radius: 3px;
+	@include box-styles;
 	margin: .5em 0 0 .2em;
 	header {
 		border-bottom: 1px solid $light-gray;
@@ -355,9 +353,7 @@ POSTS & CONTENT STYLES
 	margin-bottom: -.6em;
 
 	p {
-		border: 1px solid $gray-l10;
-		background-color: $light-gray;
-		border-radius: 3px;
+		@include box-styles;
 		margin-bottom: 0;
 		padding: .8em;
 	}
@@ -970,8 +966,7 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	border: 1px solid $gray-l10;
-	background-color: $light-gray;
+	@include box-styles;
 	width:95%;
 	padding: 1em .8em 2em 1em;
 	margin: 2em .3em;
