@@ -37,107 +37,92 @@ HEADER STYLES
 
 	#logo {}
 
+	.custom-logo{
+		width: 11%;
+		max-width: 8em
+	}
+
+
 /*********************
 NAVIGATION STYLES
 *********************/
 
-.nav {
-	border: 0;
-	ul {
-		background:$black;
-		margin-top:0;
-	}
-	li {
-		float: left;
-		position: relative;
+.main-nav {
 
-		a {
+ul{
+
+  li{
+		float:left;
+
+  	ul.sub-menu,
+		ul.children {
+      // display: none;
+
+    }
+    a{
 			border-bottom: 0;
+			display: block;
+			padding: .3em .6em .6em;
+			width: 100%;
+
 
 			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
 			*/
-			&:hover, &:focus {
-				color: $highlight-green;
-				text-decoration: none;
-			}
-		}
+        &:hover, &:focus {
+        }
+      }
 
-		&:first-child {}
-		&:last-child {}
+			&:first-child {}
 
-		/*
-		plan your menus and drop-downs wisely.
-		*/
-		ul.sub-menu,
-		ul.children {
-			margin-top: 0;
-			border: 1px solid #ccc;
-			border-top: 0;
-			position: absolute;
-			visibility: hidden;
-			z-index: 8999;
-
-			li {
-
+			&:last-child {
 				a {
-					padding-left: 10px;
-					border-right: 0;
-					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
 				}
+			}
 
-				&:first-child {}
+			/*
+			so you really have to rethink your dropdowns for mobile.
+			you don't want to have it expand too much because the
+			screen is so small. How you manage your menu should
+			depend on the project. Here's some great info on it:
+			http://www.alistapart.com/articles/organizing-mobile/
+			*/
+			ul.sub-menu,
+			ul.children {
 
-				&:last-child {
+				li {
 
 					a {
-						border-bottom: 0;
+						//padding-left: 30px;
+
+						&:hover,
+						&:focus {}
+
+						&:link {}
+
 					}
+
+					&:first-child {}
+
+					&:last-child {}
+
 				}
 
-				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-				ul {
-					top:0;
-					left:100%;
-				}
 			}
+    }
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
 
-			/* highlight sub-menu current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current_page_ancestor {
-				a {}
-			}
-		}
+			a {}
 
-		/* showing sub-menus */
-		&:hover > ul {
-			top: auto;
-			visibility:visible;
-		}
-
-	} /* end .menu ul li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
-		a {}
-	}  /* end current highlighters */
-
-} /* end .nav */
+		}  /* end current highlighters */
+	}/*end ul*/
+ } /* end .main-nav */
 
 /*********************
 SIDEBARS & ASIDES
@@ -145,10 +130,11 @@ SIDEBARS & ASIDES
 
 .sidebar {
 	margin-top: 2.2em;
+	float: right;
 }
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
+		//border-bottom: 2px solid #444;
 		margin-bottom: 0.75em;
 	}
 

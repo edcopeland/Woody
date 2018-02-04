@@ -10,5 +10,12 @@ be seen on the Desktop.
 ******************************************************************/
 
 .wrap {
-  width: 1040px;
+  width: 960px;
+}
+
+#content {
+  clear: both;
+  margin-top: 3em;
+  display: inline;
+
 }
