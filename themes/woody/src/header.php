@@ -58,16 +58,6 @@
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
 
-					<div class="header-image">
-						<?php $header_image = get_header_image();
-						if ( ! empty( $header_image ) ) { ?>
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-								<img src="<?php header_image(); ?>"   alt="" />
-								</a>
-						<?php 	} // if ( ! empty( $header_image ) ) ?>
-
-					</div>
-
 					<div id = "nav-container" class ="nav-container">
 						<nav id= "main-nav" class= "main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<a class="toggleMenu" href="#">  Menu &nbsp; &#9776; </a>
@@ -87,5 +77,15 @@
 
 						</nav>
 					</div><!-- navcontainer -->
+					
+					<div class="header-image">
+						<?php $header_image = get_header_image();
+						if ( ! empty( $header_image ) ) { ?>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+								<img src="<?php header_image(); ?>"   alt="" />
+								</a>
+						<?php 	} // if ( ! empty( $header_image ) ) ?>
+
+					</div>
 				</div><!-- inner-header -->
 			</header>
