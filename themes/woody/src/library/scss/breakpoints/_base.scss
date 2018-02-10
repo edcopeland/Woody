@@ -153,9 +153,10 @@ HEADER STYLES
 *********************/
 
 .header {
-	//margin: .2em .2em 0 .2em;
+	border-bottom: 1px solid $gray-l20;
  	img {
 		background-color: $white;
+
 	}
 }
 	#logo {
@@ -167,10 +168,9 @@ HEADER STYLES
 	}
 
 .custom-logo{
-	width: 18%;
+	width: 4rem;
 	height: auto;
 	margin: 1% 1%;
-	float:left;
 	z-index:10;
 	position: absolute;
 
@@ -203,27 +203,44 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
+
+
 .main-nav {
-  clear: both;
   border-bottom: 0;
   border-radius:$bord-rad;
 	text-decoration: none;
+	color: white;
+	z-index:10;
+
 
 .toggleMenu {
-	border: 1px solid $boarder-color;
 	border-radius: $bord-rad;
-  color: $text-color;
-	font-size: 1.2em;
-	margin: 0 1%;
-	padding: 10px 37%;
-	position: relative;
+	font-size: 2.5em;
+	z-index:10;
+	position: absolute;
+	right: 1rem;
 	text-decoration: none;
-	width: 25%;
 
   }
+	.toggle-white{
+		color:white;
+		&:hover, &:focus {
+			color: white;
+		}
+	}
+
+	.toggle-green{
+		color: $link-color;
+		&:hover, &:focus {
+			color: $link-color;
+		}
+	}
+
 ul{
-	margin-bottom: 1em;
-	margin-top: .5em;
+	margin: .5em 0 1em 3.5em;
+	display: none;
+
+
 
   li{
 		list-style: none;
@@ -236,10 +253,9 @@ ul{
     a{
 			text-decoration: none;
 			border-bottom: 1px solid $boarder-color;
-			color: $text-color;
 			display: block;
 			padding: .3em .4em .6em;
-			width: 82%;
+			width: 65%;
 
 
 			/*
@@ -252,7 +268,8 @@ ul{
         }
       }
 
-			&:first-child {}
+			&:first-child {
+			}
 
 			&:last-child {
 				a {

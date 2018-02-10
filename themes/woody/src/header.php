@@ -60,7 +60,7 @@
 
 					<div id = "nav-container" class ="nav-container">
 						<nav id= "main-nav" class= "main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-							<a class="toggleMenu" href="#">  Menu &nbsp; &#9776; </a>
+							<a class="toggleMenu toggle-white" href="#">  &#9776; </a>
 							<?php wp_nav_menu(array(
 	    					         'container' => false,                           // remove nav container
 	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -77,7 +77,7 @@
 
 						</nav>
 					</div><!-- navcontainer -->
-					
+
 					<div class="header-image">
 						<?php $header_image = get_header_image();
 						if ( ! empty( $header_image ) ) { ?>
