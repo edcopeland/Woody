@@ -46,11 +46,14 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
+.toggleMenu{
+	display: none;
+}
 
 .main-nav {
 
 ul{
-
+ display: inline-block;
   li{
 		float:left;
 
