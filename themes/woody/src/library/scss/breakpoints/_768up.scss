@@ -33,13 +33,17 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	.header-bar{
+		position: absolute;
+	}
+}
 
 	#logo {}
 
 	.custom-logo{
 		width: 11%;
-		max-width: 8em
+		max-width: 6.5rem;
 	}
 
 
@@ -51,11 +55,17 @@ NAVIGATION STYLES
 }
 
 .main-nav {
+	margin-left: 1em;
+	left: 15rem;
+	z-index: 9;
+	background: 	rgba(black, .25);
 
 ul{
  display: inline-block;
+ margin-bottom: .5em;
   li{
 		float:left;
+		margin-right: 1em;
 
   	ul.sub-menu,
 		ul.children {
@@ -65,8 +75,14 @@ ul{
     a{
 			border-bottom: 0;
 			display: block;
-			padding: .3em .6em .6em;
+			padding: .3em 0 0 0;
+			margin: 0 1em 0 0;
 			width: 100%;
+			color:white;
+			font-weight:900;
+			font-size: 1rem;
+			border-right: 1px solid white;
+
 
 
 			/*
@@ -83,6 +99,7 @@ ul{
 
 			&:last-child {
 				a {
+					border: none;
 				}
 			}
 
