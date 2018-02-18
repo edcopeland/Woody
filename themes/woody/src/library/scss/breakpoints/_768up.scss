@@ -18,6 +18,7 @@ GENERAL STYLES
 *********************/
 
 body {
+	background-color: $gray-l30;
 
 }
 
@@ -28,6 +29,19 @@ LAYOUT & GRID STYLES
 .wrap {
 	width: 760px;
 }
+
+#content{
+	//background-color: white;
+	//@include box-styles;
+}
+
+#inner-content{
+	background-color: white;
+	@include box-styles;
+	//margin: auto;
+}
+
+
 
 /*********************
 HEADER STYLES
@@ -63,11 +77,17 @@ NAVIGATION STYLES
 	background: 	rgba(black, .25);
 
 ul{
+ margin: 0 0 0 1rem;
+ padding: .5rem 0 0 3.5rem;
  display: inline-block;
- margin-bottom: .5em;
+
   li{
+
 		float:left;
+		display:inline-block;
+		position:relative;
 		margin-right: 1em;
+
 
   	ul.sub-menu,
 		ul.children {
@@ -75,8 +95,8 @@ ul{
 
     }
     a{
+			display: inline-block;
 			border-bottom: 0;
-			display: block;
 			padding: .3em 0 0 0;
 			margin: 0 1em 0 0;
 			width: 100%;
@@ -101,7 +121,8 @@ ul{
 
 			&:last-child {
 				a {
-					border: none;
+					border: 0;
+					//position:absolute;
 				}
 			}
 
@@ -112,28 +133,36 @@ ul{
 			depend on the project. Here's some great info on it:
 			http://www.alistapart.com/articles/organizing-mobile/
 			*/
-			ul.sub-menu,
-			ul.children {
+
+			&:hover {
+
+				.sub-menu{
+					z-index: 1;
+					opacity: 1;
+				}
+			}
+			.sub-menu{
+				width:360%;
+				top:100%;
+				position: absolute;
+				left:0px;
+				padding-left: 1rem;
+				margin-left: -1rem;
+				background: 	rgba(black, .25);
+				z-index: -1;
+				opacity: 0;
 
 				li {
-
-					a {
-						//padding-left: 30px;
-
-						&:hover,
-						&:focus {}
-
-						&:link {}
+					clear: both;
+					display: block;
+					a{
+						//display: none;
+						border: 0;
 
 					}
-
-					&:first-child {}
-
-					&:last-child {}
-
 				}
-
 			}
+
     }
 		/* highlight current page */
 		li.current-menu-item,
@@ -145,6 +174,13 @@ ul{
 		}  /* end current highlighters */
 	}/*end ul*/
  } /* end .main-nav */
+
+#main{
+	width: auto;
+	margin: 0 1rem 0 0;
+	padding: 1rem 2rem 1rem 1rem;
+
+}
 
 /*********************
 SIDEBARS & ASIDES

@@ -71,8 +71,18 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 100%;
 	margin: 0 auto;
+	overflow: auto;
+}
+
+#content{
+	overflow:auto;
+}
+
+
+#inner-content{
+	overflow:auto;
 }
 
 /*********************
@@ -247,9 +257,13 @@ ul{
 
   	ul.sub-menu,
 		ul.children {
-      display: none;
+      // display: none;
 
     }
+		.sub-menu{
+			padding-left: 2em;
+			margin-left: 0;
+		}
     a{
 			text-decoration: none;
 			border-bottom: 1px solid $boarder-color;
@@ -342,8 +356,9 @@ POSTS & CONTENT STYLES
 }
 
 .front-page-title{
-	margin: 1em 0 .5em .4em;
+	margin: 1em 0 .5em 1rem;
 }
+
 .hentry {
 
 	@include box-styles;
@@ -357,7 +372,7 @@ POSTS & CONTENT STYLES
 		border-top: 1px solid $light-gray;
 
 		p {
-			margin: 0;
+			margin: 1rem;
 		}
 	}
 
@@ -369,6 +384,7 @@ POSTS & CONTENT STYLES
 	border: 0;
 	background-color: white;
 	margin-bottom: -.6em;
+
 
 	p {
 		@include box-styles;
@@ -388,6 +404,7 @@ POSTS & CONTENT STYLES
 	.page-title{
 		margin: .4em 0 .1em 0;
 	}
+
 }
 .single-title,
 .entry-title {
@@ -395,6 +412,7 @@ POSTS & CONTENT STYLES
 	clear:both;
 	font-size: 1.2em;
 }
+
 
 
 .single-title {}
@@ -450,14 +468,14 @@ POSTS & CONTENT STYLES
 .entry-content {
 	padding: 0;
 
-	.page-title{
+	.page-title, {
 		margin-top: 2em;
 		font-size: 1.1em;
 	}
 
 
 	p {
-		margin: 0 .5em;;
+		margin: 0 .3rem 0 1rem;
 		font-size: 1em;
 		clear: both;
 	}
