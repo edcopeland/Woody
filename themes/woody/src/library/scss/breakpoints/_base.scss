@@ -1083,9 +1083,12 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $meta-gray;
 	color: $black;
 	padding: .4em 1em;
+}
+
+.inner-footer {
+	background-color: $gray-l10;
 }
 
 
@@ -1109,7 +1112,7 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 .footer-contacts {
-  margin: 0;
+  margin: 2rem 2rem 10rem 2rem;
 
   ul {
 		padding-left: 0;

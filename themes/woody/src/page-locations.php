@@ -15,7 +15,7 @@
 <?php get_header(); ?>
 	<div id="content">
 		<div id="inner-content" class="wrap cf">
-			<div id="main" class="m-all t-all d-7of7 cf" role="main">
+			<div id="main" class="m-all t-all d-4of7 cf" role="main">
         <?php
         while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class( array('cf', 'locations-page') ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
