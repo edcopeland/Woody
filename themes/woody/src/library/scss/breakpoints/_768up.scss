@@ -124,6 +124,14 @@ ul{
 					//position:absolute;
 				}
 			}
+			.sub-menu {
+				padding-left: .8rem;
+				margin-left: 0;
+				margin-bottom: 0;
+				a{
+					background: 	rgba(black, .25);
+				}
+			}
 
 			/*
 			so you really have to rethink your dropdowns for mobile.

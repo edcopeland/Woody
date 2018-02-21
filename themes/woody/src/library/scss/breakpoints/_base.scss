@@ -261,10 +261,7 @@ ul{
       // display: none;
 
     }
-		.sub-menu{
-			padding-left: 2em;
-			margin-left: 0;
-		}
+
     a{
 			text-decoration: none;
 			border-bottom: 1px solid $boarder-color;
@@ -288,6 +285,15 @@ ul{
 			&:last-child {
 				a {
 					border-bottom: 0;
+				}
+			}
+
+			.sub-menu {
+				padding-left: .8rem;
+				margin-left: 0;
+				margin-bottom: 0;
+				a{
+					background-color: $gray-l30;
 				}
 			}
 
@@ -1084,7 +1090,7 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	color: $white;
-	padding: .4em 1em;
+	padding: .4em 0;
 }
 
 .inner-footer {
