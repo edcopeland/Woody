@@ -221,7 +221,6 @@ and more scalable.
 	text-decoration: none;
 	color: white;
 	z-index:10;
-	
 
 
 
@@ -353,7 +352,7 @@ POSTS & CONTENT STYLES
 }
 
 .category-name{
-	margin: 2em 0 .5em .6em;
+	margin: 2em 0 .5em 1em;
 }
 
 .front-page-title{
@@ -390,20 +389,19 @@ POSTS & CONTENT STYLES
 	p {
 		@include box-styles;
 		margin-bottom: 0;
-		padding: .8em;
 	}
 }
 
 
 .page-title{
-	margin: .6em 0 .5em .1em;
+	margin: .6em 0 .5em .5em;
 	clear:both;
 	font-size: 1.2em;
 }
 
 .page-post{
 	.page-title{
-		margin: .4em 0 .1em 0;
+		margin: .4em 0 .1em .4rem;
 	}
 
 }
@@ -507,6 +505,7 @@ POSTS & CONTENT STYLES
 	#more-link{
 		float:right;
 		text-decoration: none;
+		margin-right: 1rem;
 	}
 	.excerpt-read-more {
 		display:none;
@@ -576,9 +575,9 @@ POSTS & CONTENT STYLES
 
 	}
 	img {
-		margin: .5em 0 1em -5px;
+		margin: .5em 0 1em 0;
 
-		width: 104%;
+		width: 100%;
 		height: auto;
 	}
 
