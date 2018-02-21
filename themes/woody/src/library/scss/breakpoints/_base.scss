@@ -221,6 +221,8 @@ and more scalable.
 	text-decoration: none;
 	color: white;
 	z-index:10;
+	
+
 
 
 .toggleMenu {
@@ -270,7 +272,6 @@ ul{
 			display: block;
 			padding: .3em .4em .6em;
 			width: 65%;
-
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -1083,12 +1084,14 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	color: $black;
+	color: $white;
 	padding: .4em 1em;
 }
 
 .inner-footer {
-	background-color: $gray-l10;
+	background-color: $footer-color;
+	font-weight: 900;
+	font-size: 1.1rem;
 }
 
 

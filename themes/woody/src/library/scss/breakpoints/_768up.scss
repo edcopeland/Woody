@@ -18,7 +18,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	background-color: $gray-l30;
+	background-color: $margin-color;
 
 }
 
@@ -314,6 +314,9 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
+
+
+
 .footer-links {
 	ul {
 		li {
