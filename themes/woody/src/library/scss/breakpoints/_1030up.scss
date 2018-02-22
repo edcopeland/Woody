@@ -17,6 +17,11 @@ be seen on the Desktop.
   clear: both;
   margin-top: 3em;
   display: inline;
+
+}
+
+#inner-content{
+  border: 2px solid $gray-l25;
 }
 
 #main {
@@ -25,7 +30,7 @@ be seen on the Desktop.
   margin-right: 0;
   padding-right: 0;
   border-radius: 0;
-  border: 2px solid $gray-l25;
+  border-right: 2px solid $gray-l25;
   border-bottom: 0;
 
 }
@@ -39,7 +44,7 @@ be seen on the Desktop.
   margin: 0;
   width:36%;
   border-radius: 0;
-  border: 2px solid $gray-l25;
+  //border: 2px solid $gray-l25;
   border-bottom: 0;
   border-left: 0;
 

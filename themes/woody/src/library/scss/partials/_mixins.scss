@@ -74,7 +74,7 @@ probably best not to use it. I mean, were you going to anyway? */
 @mixin box-styles {
   border-bottom: 1px solid $gray-l20;
 	background-color: white;
-  border-radius: 5px;
+  border-radius: 0;
   padding-bottom: 1rem;
 
 }
