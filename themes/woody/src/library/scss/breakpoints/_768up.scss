@@ -18,7 +18,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	background-color: $margin-color;
+//	background-color: $margin-color;
 
 }
 
@@ -51,7 +51,7 @@ HEADER STYLES
 	border-bottom: none;
 
 	.header-bar{
-		position: absolute;
+	//	position: absolute;
 	}
 }
 
@@ -70,23 +70,24 @@ NAVIGATION STYLES
 }
 
 .main-nav {
-	margin-left: 6em;
+	margin-left: 12em;
 	left: 15rem;
 	z-index: 9;
-	background: 	rgba(black, .25);
 
 ul{
- margin: 0 0 0 1rem;
- padding: .5rem 0 0 3.5rem;
+ margin: 0 1rem 0 1rem;
+ padding: .5rem 0 0 .5rem;
  display: inline-block;
+
 
   li{
 
 		float:left;
 		display:inline-block;
 		position:relative;
-		margin-right: 1em;
-
+		//margin-right: 1em;
+		&:hover, &:focus {
+		}
 
   	ul.sub-menu,
 		ul.children {
@@ -96,15 +97,19 @@ ul{
     a{
 			display: inline-block;
 			border-bottom: 0;
-			padding: .3em 0 0 0;
-			margin: 0 1em 0 0;
+			padding: .3em 0 0 .5rem;
+			margin: 0 .5rem 0 0;
 			width: 100%;
-			color:white;
+			color:gray;
 			font-weight:900;
-			font-size: 1rem;
+			font-size: 1.2rem;
 			border-right: 1px solid white;
 
+			&:hover, &:focus {
+				background: 	rgba(black, .25);
 
+				color:white;
+			}
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -112,8 +117,7 @@ ul{
 			the style.scss file where it's relevant. We want to
 			keep this file as small as possible!
 			*/
-        &:hover, &:focus {
-        }
+
       }
 
 			&:first-child {}
@@ -125,11 +129,16 @@ ul{
 				}
 			}
 			.sub-menu {
-				padding-left: .8rem;
+				padding-left: 0;
+				li{
+
+				}
+			//	padding-left: .8rem;
 				margin-left: 0;
 				margin-bottom: 0;
 				a{
-					background: 	rgba(black, .25);
+				//	background: 	rgba(black, .25);
+
 				}
 			}
 
@@ -149,13 +158,11 @@ ul{
 				}
 			}
 			.sub-menu{
-				width:360%;
+				width:260%;
 				top:100%;
 				position: absolute;
 				left:0px;
-				padding-left: 1rem;
-				margin-left: -1rem;
-				background: 	rgba(black, .25);
+				background: 	rgba(white, .25);
 				z-index: -1;
 				opacity: 0;
 
@@ -165,6 +172,8 @@ ul{
 					a{
 						//display: none;
 						border: 0;
+						width:15rem;
+						padding-left: 1rem;
 
 					}
 				}
@@ -185,7 +194,7 @@ ul{
 #main{
 	width: auto;
 	margin: 0 1rem 0 0;
-	padding: 1rem 2rem 1rem 1rem;
+  padding: 1rem 2rem 1rem 1rem;
 
 }
 
@@ -194,7 +203,7 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
+	margin-top: 6rem;
 	float: right;
 }
 
