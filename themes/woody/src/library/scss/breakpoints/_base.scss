@@ -310,7 +310,12 @@ POSTS & CONTENT STYLES
 }
 
 .category-name{
-	margin: 2em 0 .5em 1em;
+	font-size: 1.2rem;
+	margin: 1em .2rem .5rem 1em;
+	padding-bottom: 1rem;
+	text-align: center;
+	border-bottom: 2px solid $gray;
+
 }
 
 .front-page-title{
@@ -342,6 +347,14 @@ POSTS & CONTENT STYLES
 	border: 0;
 	background-color: white;
 	margin-bottom: -.6em;
+	.hentry{
+		padding-top: 0;
+	}
+	.page-title{
+		margin-left: .5rem;
+		font-size: 2rem;
+	}
+
 
 
 	p {
@@ -376,6 +389,7 @@ POSTS & CONTENT STYLES
 
 .entry-time{
 	font-size: .9em;
+	margin-left: .5rem;
 }
 
 .archive-title {}
