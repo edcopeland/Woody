@@ -85,7 +85,7 @@
 						<?php $header_image = get_header_image();
 						if ( ! empty( $header_image ) ) { ?>
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-								<img src="<?php header_image(); ?>"   alt="" />
+								<img src="<?php //header_image(); ?>"   alt="" />
 								</a>
 						<?php 	} // if ( ! empty( $header_image ) ) ?>
 
