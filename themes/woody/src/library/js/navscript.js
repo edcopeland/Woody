@@ -8,6 +8,7 @@ $(document).ready(function() {
 		$("#main-nav ul").slideToggle(40);
 		$(".header-image").slideToggle(40);
 		$(".toggleMenu").toggleClass('toggle-white toggle-green');
+		$(".custom-logo").toggleClass('toggle-small');
 
 	});
 })
