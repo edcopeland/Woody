@@ -155,6 +155,9 @@ LAYOUT & GRID STYLES
 #content{
 	margin-top: .2em;
 	overflow:auto;
+	z-index: 10;
+	position: relative;
+
 }
 
 #inner-content{
@@ -170,28 +173,28 @@ HEADER STYLES
 
 
 
-
- 	img {
-		background-color: $white;
+  img {
+    background-color: $white;
 
 	}
 }
-	#logo {
-		margin: 0.75em 0;
+
+  #logo {
+     margin: .75em 0;
 
 		a {
 			color: $white;
 		}
 	}
 
-.custom-logo{
-	width: 40%;
-	height: auto;
-	margin: 1% 1%;
-	margin-left: 26%;
-	z-index:10;
+.custom-logo {
+  width: 40%;
+  height: auto;
+  margin: 1%;
+  margin-left: 26%;
+  z-index: 10;
 	//position: absolute;
-	float:left;
+  float: left;
 
 }
 
@@ -235,7 +238,6 @@ and more scalable.
   border-radius:$bord-rad;
 	text-decoration: none;
 	color: gray;
-	z-index:10;
 
 .toggleMenu {
 	border-radius: $bord-rad;
@@ -294,6 +296,7 @@ ul{
 				margin-bottom: 0;
 				a{
 					background-color: $gray-l30;
+
 					}
 				}
 			}
@@ -330,10 +333,10 @@ POSTS & CONTENT STYLES
 .hentry {
 
 	@include box-styles;
-	margin: .5em 0 0 ;
+	margin: 0 0 0 1rem;
 	header {
 		border-bottom: 1px solid $light-gray;
-		padding: .5em .5em 0;
+		padding: .5rem .5em 0;
 	}
 
 	footer {
@@ -345,6 +348,12 @@ POSTS & CONTENT STYLES
 	}
 
 } /* end .hentry */
+
+.type-page{
+	header{
+		padding: 0 .5rem;
+	}
+}
 
 .news-page,
 .locations-page,

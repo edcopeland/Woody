@@ -58,7 +58,7 @@ HEADER STYLES
 	#logo {}
 
 	.custom-logo{
-		width: 25%;
+		width: 15%;
 		margin-left: 1rem;
 	}
 
@@ -73,12 +73,15 @@ NAVIGATION STYLES
 .main-nav {
 	margin-left: 12em;
 	left: 15rem;
-	z-index: 9;
 
 ul{
  margin: 0 1rem 0 1rem;
  padding: .5rem 0 0 .5rem;
  display: inline-block;
+ position: relative;
+ z-index: 1000;
+
+
 
 
   li{
@@ -126,7 +129,6 @@ ul{
 			&:last-child {
 				a {
 					border: 0;
-					//position:absolute;
 				}
 			}
 			.sub-menu {
@@ -154,27 +156,25 @@ ul{
 			&:hover {
 
 				.sub-menu{
-					z-index: 1;
-					opacity: 1;
+					display: inline;
 				}
 			}
 			.sub-menu{
-				width:260%;
-				top:100%;
-				position: absolute;
-				left:0px;
+				position: fixed;
 				background: 	rgba(white, .25);
-				z-index: -1;
-				opacity: 0;
+			  display: none;
+
 
 				li {
 					clear: both;
 					display: block;
+
 					a{
 						//display: none;
 						border: 0;
-						width:15rem;
+						width: 15rem;
 						padding-left: 1rem;
+
 
 					}
 				}
@@ -195,7 +195,7 @@ ul{
 #main{
 	width: auto;
 	margin: 0 1rem 0 0;
-  padding: 1rem 2rem 1rem 1rem;
+  padding: 0 2rem 1rem 1rem;
 
 }
 
