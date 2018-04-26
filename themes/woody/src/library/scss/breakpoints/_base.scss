@@ -379,7 +379,7 @@ POSTS & CONTENT STYLES
 
 
 .page-title{
-	margin: .6em 0 .5em .5em;
+	margin: .6em 0 .5em .8em;
 	clear:both;
 	font-size: 1.2em;
 }
@@ -392,7 +392,7 @@ POSTS & CONTENT STYLES
 }
 .single-title,
 .entry-title {
-	margin: .4em 0 .1em 0;
+	margin: .4em 0 .1em .6rem;
 	clear:both;
 	font-size: 1.2em;
 }
@@ -991,8 +991,8 @@ SIDEBARS & ASIDES
 .sidebar {
 	@include box-styles;
 	width:95%;
-	padding: 1rem .8em 2em 1em;
-	margin: 1rem .3em;
+	padding: 0 .8em 2em 0;
+	margin: 0 .3em;
 }
 
 	.widgettitle {
