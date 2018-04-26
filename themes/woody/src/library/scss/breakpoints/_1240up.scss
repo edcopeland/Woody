@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name: 
-Author: 
+Site Name:
+Author:
 
 Stylesheet: Super Large Monitor Stylesheet
 
@@ -9,3 +9,28 @@ on larger screens.
 
 ******************************************************************/
 
+.wrap {
+  width: 1200px;
+  //padding: 0;
+  //margin: 0;
+}
+
+#inner-content{
+	border-top: 0;
+
+}
+
+#main {
+  width: 65%;
+}
+
+
+
+.sidebar {
+	margin-top: 2rem;
+	float: right;
+  width :32%;
+  margin-left: 1rem;
+  border-radius: 0;
+  border: 2px solid $gray-l25;
+}

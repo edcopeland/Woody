@@ -991,14 +991,15 @@ SIDEBARS & ASIDES
 .sidebar {
 	@include box-styles;
 	width:95%;
-	padding: 1em .8em 2em 1em;
-	margin: 2em .3em;
+	padding: 1rem .8em 2em 1em;
+	margin: 1rem .3em;
 }
 
 	.widgettitle {
 		margin: .5em 2em 0 0;
 		font-size: 1.3em;
 		border-bottom: 1px solid $border-color;
+		padding-left: 1rem;
 
 	}
 
@@ -1070,11 +1071,11 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	color: $white;
+	background-color: $footer-color;
 	padding: .4em 0;
 }
 
 .inner-footer {
-	background-color: $footer-color;
 	font-weight: 900;
 	font-size: 1.1rem;
 }

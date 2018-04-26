@@ -27,7 +27,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 760px;
+	width: 768px;
 }
 
 #content{
@@ -38,6 +38,8 @@ LAYOUT & GRID STYLES
 #inner-content{
 	background-color: white;
 	@include box-styles;
+	border-top: 2px solid $gray-l25;
+
 	//margin: auto;
 }
 
@@ -72,11 +74,11 @@ NAVIGATION STYLES
 
 .nav-container{
 	clear: left;
+	margin-left: -8rem;
 
 }
 
 .main-nav {
-	margin-left: -7rem;
 //	left: 15rem;
 
 ul{
@@ -199,8 +201,8 @@ ul{
 
 #main{
 	width: auto;
-	margin: 0 1rem 0 0;
-  padding: 0 2rem 1rem 1rem;
+	margin: 0;
+  padding: 0 .8rem 1rem .8rem;
 
 }
 
@@ -208,10 +210,6 @@ ul{
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {
-	margin-top: 6rem;
-	float: right;
-}
 
 	.widgettitle {
 		//border-bottom: 2px solid #444;
@@ -219,8 +217,8 @@ SIDEBARS & ASIDES
 	}
 
 	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0;
+		padding: 0 0 0  1.7rem;
+		margin: 1.5rem 0;
 
 		ul {
 			li {
