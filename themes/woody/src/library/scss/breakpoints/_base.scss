@@ -333,7 +333,7 @@ POSTS & CONTENT STYLES
 .hentry {
 
 	@include box-styles;
-	margin: 0 0 0 1rem;
+	margin: 0;
 	header {
 		border-bottom: 1px solid $light-gray;
 		padding: .5rem .5em 0;
