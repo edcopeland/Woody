@@ -51,15 +51,15 @@ HEADER STYLES
 	border-bottom: none;
 
 	.header-bar{
-	//	position: absolute;
+		margin-left: 40%;
 	}
 }
 
 	#logo {}
 
 	.custom-logo{
-		width: 15%;
-		margin-left: 1rem;
+		width: 35%;
+		margin-left: 0;
 	}
 
 
@@ -70,9 +70,14 @@ NAVIGATION STYLES
 	display: none;
 }
 
+.nav-container{
+	clear: left;
+
+}
+
 .main-nav {
-	margin-left: 12em;
-	left: 15rem;
+	margin-left: -7rem;
+//	left: 15rem;
 
 ul{
  margin: 0 1rem 0 1rem;
@@ -110,7 +115,7 @@ ul{
 			border-right: 1px solid white;
 
 			&:hover, &:focus {
-				background: 	rgba(black, .25);
+				background: 	rgba(gray, .8);
 
 				color:white;
 			}
