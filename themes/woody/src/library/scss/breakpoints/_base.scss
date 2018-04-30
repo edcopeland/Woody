@@ -310,7 +310,9 @@ ul{
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-
+#main {
+	width: 100%;
+}
 
 
 .section{
@@ -384,9 +386,20 @@ POSTS & CONTENT STYLES
 	font-size: 1.2em;
 }
 
-.page-post{
+.has-post-thumbnail{
+	width: 100%;
+	img {
+		width:100%;
+	}
+}
+.page-post {
 	.page-title{
 		margin: .4em 0 .1em .4rem;
+	}
+	.entry-content{
+		img{
+			width:100%;
+		}
 	}
 
 }
@@ -460,7 +473,7 @@ POSTS & CONTENT STYLES
 
 
 	p {
-		margin: 0 .3rem 0 1rem;
+		margin: 1rem .3rem 2rem 1rem;
 		font-size: 1em;
 		clear: both;
 	}
@@ -561,9 +574,9 @@ POSTS & CONTENT STYLES
 
 	}
 	img {
-		margin: .5em 0 1em 0;
+		margin: 3rem 0 3em 0;
 
-		width: 100%;
+		//width: 100%;
 		height: auto;
 	}
 
