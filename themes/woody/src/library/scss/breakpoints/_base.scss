@@ -386,12 +386,7 @@ POSTS & CONTENT STYLES
 	font-size: 1.2em;
 }
 
-.has-post-thumbnail{
-	width: 100%;
-	img {
-		width:100%;
-	}
-}
+
 .page-post {
 	.page-title{
 		margin: .4em 0 .1em .4rem;
@@ -574,7 +569,7 @@ POSTS & CONTENT STYLES
 
 	}
 	img {
-		margin: 3rem 0 3em 0;
+	//	margin: 1rem 0 1em 0;
 
 		//width: 100%;
 		height: auto;
@@ -660,8 +655,17 @@ POSTS & CONTENT STYLES
 margin: 0;
 }
 
+.attachment-bones-thumb-full{
 
+		margin: 2rem 0 1rem 11rem;
 
+}
+
+.attachment-bones-thumb-600 {
+
+		margin: 1rem 0 1rem 0rem;
+
+}
 
 /******************************************************************
 PAGE NAVI STYLES
