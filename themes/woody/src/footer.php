@@ -19,23 +19,23 @@
 					</nav>
 
 					<!-- <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p> -->
-      <div class="footer-contacts">
+      <div class="contact">
 				<ul>
-						<li><?php echo contact_get_option( '_contact_options_company_name'); ?></li>
-						<li><?php echo  contact_get_option( '_contact_options_c_o');?></li>
+						<li class="company-name"> <?php echo contact_get_option( '_contact_options_company_name'); ?></li>
+						<li class="company-c/o"><?php echo  contact_get_option( '_contact_options_c_o');?></li>
 
 						<?php $address_array = contact_get_option( '_contact_options_address');?>
 
 						<?php foreach ($address_array as &$value) { ?>
-						<li><?php echo $value ?></li>
+						<li class="contact-address"><?php echo $value ?></li>
 						<?php } ?>
 
-						<li><?php echo contact_get_option( '_contact_options_town');?></li>
-						<li><?php echo contact_get_option( '_contact_options_county'); ?></li>
-						<li><?php echo contact_get_option( '_contact_options_postcode'); ?></li>
-						<li><?php echo contact_get_option( '_contact_options_tel'); ?></li>
-						<li><?php echo contact_get_option( '_contact_options_url'); ?></li>
-						<li><?php echo contact_get_option( '_contact_options_email'); ?></li>
+						<li class="contact-town"><?php echo contact_get_option( '_contact_options_town');?></li>
+						<li class="contact-county"><?php echo contact_get_option( '_contact_options_county'); ?></li>
+						<li class="contact-postcode"><?php echo contact_get_option( '_contact_options_postcode'); ?></li>
+						<li class="conttact-tel"><?php echo contact_get_option( '_contact_options_tel'); ?></li>
+						<li class="contact-url"><?php echo contact_get_option( '_contact_options_url'); ?></li>
+						<li class="contact-email"><?php echo contact_get_option( '_contact_options_email'); ?></li>
 				</ul>
       </div>
 
