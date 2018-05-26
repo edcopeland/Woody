@@ -1098,7 +1098,7 @@ FOOTER STYLES
 
 .inner-footer {
 	font-weight: 900;
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 }
 
 
@@ -1121,15 +1121,16 @@ FOOTER STYLES
 
 	} /* end .footer-links */
 
-.footer-contacts {
+.contact {
   margin: 2rem 2rem 10rem 2rem;
 
   ul {
-		padding-left: 0;
+		float:left;
+		//padding-right: 0;
     li {
 			position: relative;
       list-style: none;
-			line-height: 1.1em;
+			line-height: 1.5em;
     }
   }
 }

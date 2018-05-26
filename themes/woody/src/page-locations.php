@@ -55,7 +55,7 @@
 										<section id="section" class="entry-content cf" itemprop="articleBody">
 											<?php
 													if ( has_post_thumbnail() ) {
-															the_post_thumbnail('bones-thumb-600',array( 'id' => 'all-posts-thumb'));
+															the_post_thumbnail('bones-thumb-900',array( 'id' => 'all-posts-thumb'));
 															 //the_post_thumbnail( 'bones-thumb-600' );
 													}
 													?>
