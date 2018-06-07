@@ -191,7 +191,7 @@ HEADER STYLES
   width: 40%;
   height: auto;
   margin: 1%;
-  margin-left: 26%;
+  margin-left: 29%;
   z-index: 10;
 	//position: absolute;
   float: left;
@@ -467,11 +467,14 @@ POSTS & CONTENT STYLES
 	}
 
 
-	p {
+	p, div {
 		margin: 1rem .3rem 2rem 1rem;
 		font-size: 1em;
 		clear: both;
 	}
+ h1, h2, h3{
+	 margin: 1rem .3rem 2rem 1rem;
+ }
 
 
 
