@@ -1093,12 +1093,13 @@ FOOTER STYLES
 	clear: both;
 	color: $white;
 	background-color: $footer-color;
-	padding: .4em 0;
+	padding: .4em 0 5rem 0;
+	padding-bottom: 5rem;
 }
 
 .inner-footer {
 	font-weight: 900;
-	font-size: 1.2rem;
+	font-size: 1rem;
 }
 
 
@@ -1126,7 +1127,7 @@ FOOTER STYLES
 
   ul {
 		float:left;
-		//padding-right: 0;
+		padding-left: 0;
     li {
 			position: relative;
       list-style: none;
